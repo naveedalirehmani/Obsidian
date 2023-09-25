@@ -73,12 +73,3 @@
 #### Moving back with revert.
 
 - Git revert “commit-hash” : this will move content back to how it was in a specific commit but will not delete commit history rather will create a new commit for that. Same as doing git restore —source HEAD~2 index.html and then committing it.
-
-#### Working with local and remote branches
-
-- Git remote -v : to list remote variables
-- Git remote remove “name-of-remote-origin” : will delete a remote variable
-- Git switch apples : normally when we do this and we don’t have a branch called apples we get error, but if we clone a repo and that has a remote branch called apples we can just switch and git will automatically create a local branch called apple and connect it to remote branch origin/apple.
-- Git fetch origin “branch-name” : this will update our origin/branch-name with the remote branch. If a developer has contributed new commits to a specific branch and our local remote/branch does not know about this we can use this command and it will update remote/branch. This will not merge only fetch new commits.
-- Git fetch : will fetch new remote/branches.
-- Git pull origin ‘branch-name’ : this will fetch latest changes on remote/branch and also merge them into our local branch and local remote/branch. Merge conflicts can arise if we have also made commits in our local branch and remote tries to merge new
