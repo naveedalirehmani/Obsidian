@@ -19,3 +19,6 @@ Running Docker on macOS involves creating a virtualized Linux environment using 
 3. **Docker Daemon:** Inside the Linux virtual machine, the Docker daemon manages containers, images, networks, and storage.
 5. **Docker CLI:** Developers use the Docker CLI on macOS to interact with the Docker daemon running in the Linux VM. The Docker CLI sends commands to the daemon via a REST API.
 6. **Running Containers:** When a developer runs a container using the Docker CLI, the Docker daemon inside the Linux VM creates and manages the container's lifecycle.
+
+#### Understanding stdin, stdout and stderror.
+there are the three channels that linux attaches to every process, stdin allows use to run commands in a process, stdout channel is used to log out information about the running container & lastly stderror logs out errors in a processs.
