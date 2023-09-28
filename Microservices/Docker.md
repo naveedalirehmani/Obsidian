@@ -82,3 +82,17 @@ EXPOSE 3000
 # Set the primary command to run the application
 CMD ["npm", "run", "dev"]
 ```
+
+**Using node:alpine** : this is much simpler as we are using a alpine version what already comes with `node` and `npm` installed.
+```
+FROM node:alpine
+
+WORKDIR /app
+
+COPY package.json ./
+
+RUN npm install
+
+CMD ["npm","start"]
+```
+
