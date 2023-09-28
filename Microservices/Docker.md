@@ -50,3 +50,35 @@ there are the three channels that linux attaches to every process, stdin allows 
 23. **docker info**: Display system-wide Docker information.
 24. **docker login**: Log in to a Docker registry.
 25. **docker logout**: Log out from a Docker registry.
+
+#### Creating a docker Image
+
+**Doing everything from scratch** 😊 
+```
+# Use the lightweight Alpine Linux distribution as the base image
+FROM alpine:3.14
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Install Node.js and npm using apk
+RUN apk update && apk add nodejs npm
+
+# Copy package.json and package-lock.json to the container
+COPY package*.json ./
+
+# Install npm dependencies
+RUN npm install
+
+# Copy the rest of the application's source code to the container
+COPY . .
+
+# Set environment variables if needed
+# ENV MY_ENV_VARIABLE=value
+
+# Expose the port your application listens on
+EXPOSE 3000
+
+# Set the primary command to run the application
+CMD ["npm", "run", "dev"]
+```
