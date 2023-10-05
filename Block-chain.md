@@ -25,3 +25,16 @@ The primary purpose of hashing is to create a digital fingerprint or unique iden
 - **BLAKE2**: BLAKE2 is a cryptographic hash function that offers high performance and security. It is an improved version of the earlier BLAKE hash function and provides hash values of different lengths. BLAKE2 is designed to be fast and secure, suitable for various cryptographic applications such as message authentication, digital signatures, and key derivation.
 
 ---
+
+**Transactions.**
+Transactions in the context of blockchain refer to the transfer or exchange of digital assets or data between participants on the blockchain network. These transactions represent the fundamental units of activity recorded on a blockchain.
+
+- Sender and Receiver
+- Digital Assets or Data: Cryptocurrencies, tokens and smart contracts.
+- Amount or Quantity
+- Validation and Verification: ensuring that the assets are not double-spent or fraudulent, and confirming that the transaction adheres to the network's rules and protocols.
+- Transaction ID
+- Inclusion in Blocks.
+- Transaction Fees.
+
+---  
