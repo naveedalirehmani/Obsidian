@@ -14,3 +14,8 @@
 - Soft navigation. Only works for prefetched routes, or if routes don’t have dynamic params.
 - Can use href=‘/about#section-id-here’, here we can use # to goto a specific part of the page by giving the same id as #saction-id-here
 - Can use replace to delete browser routing history
+
+#### Dynamic routes
+
+- Create a folder like this in a segment [folder-name] and the page.tsx of this [folder-name] folder will render on dynamic routes
+- […folder-name] will catch all dynamic routes, like /about/id1/id2/id3
