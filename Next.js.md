@@ -6,3 +6,11 @@
 - Every page is server side render, unless it is cached, which happens if we use Link in-stead of a or if we visit a page.
 - If we pass cache : “no-cache” to fetch this pages will always be server side rendered.
 - Pass revalidate to fetch and the page revalidates after a mentioned time period so we achieve behaviour of ISG.
+
+#### Why use next/link
+
+- Will prefetch the component for us and for client side caching.
+- Client side navigation.
+- Soft navigation. Only works for prefetched routes, or if routes don’t have dynamic params.
+- Can use href=‘/about#section-id-here’, here we can use # to goto a specific part of the page by giving the same id as #saction-id-here
+- Can use replace to delete browser routing history
