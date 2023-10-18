@@ -19,3 +19,8 @@
 
 - Create a folder like this in a segment [folder-name] and the page.tsx of this [folder-name] folder will render on dynamic routes
 - […folder-name] will catch all dynamic routes, like /about/id1/id2/id3
+
+#### Groups
+
+- We can create folder like this (folder-name) to group segments. This will not affect the url route for segments. 
+- This is just for grouping.
