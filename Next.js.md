@@ -24,3 +24,9 @@
 
 - We can create folder like this (folder-name) to group segments. This will not affect the url route for segments. 
 - This is just for grouping.
+
+#### Layouts
+
+- You can create root level layouts by adding a layout.tsx to app folder, or also for specific segment by adding layout.tsx to each segment
+- Remember that layouts are nested, this means that if there’s a root level layout and also a layout in segment. Layout in segment will have root level layout as its layout.
+- Can also give layouts to route groups
