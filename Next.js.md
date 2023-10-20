@@ -39,3 +39,10 @@
 
 - Create a folder like this in a segment [folder-name] and the page.tsx of this [folder-name] folder will render on dynamic routes
 - […folder-name] will catch all dynamic routes, like /about/id1/id2/id3
+
+#### loading.tsx
+
+- Loading files are used to render a loading component before a component mounts.
+- In next.js before a component is mounted on screen it is render on server and then served to client, and then hydration kicks in. So rendering the page on server and then serving it takes time. During this period the loading.tsx file will be rendered.
+- If a segment as loading.tsx file, all dynamic routes in that segment will also automatically use this loading.tsx file
+- We can also use loading.tsx with react suspense. For example if there are 10 components in a page. next.js does not has to only render the page on the server but also all the components in the pages which might take a while wrapping them in suspense means that this components are streamed. Streamed mean that components are rendered one by one in order and sent to client one by one in chunks where each component is a chunk. For this just wrap for component in a react suspence tag and add a loading component to fallback of suspense.
