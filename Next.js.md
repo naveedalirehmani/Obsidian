@@ -35,3 +35,7 @@
 
 - Templates are also layouts, but they create new instance for each page. This means that new template instance is create for each page. Can be use full if we want to add render in and render out animation to pages.
 
+#### Dynamic routes
+
+- Create a folder like this in a segment [folder-name] and the page.tsx of this [folder-name] folder will render on dynamic routes
+- […folder-name] will catch all dynamic routes, like /about/id1/id2/id3
