@@ -13,3 +13,15 @@ Kubernetes is a container manager that helps us create, manage & monitor docker 
 4. **Service**: An abstract way to expose an application running on a set of pods as a network service. Even if pods die or are replaced, the service ensures the application remains accessible.
 5. **Deployment**: A higher-level construct that ensures the desired number of pod replicas are maintained. If a pod goes down, the deployment will create a new one to replace it.
 6. **Cluster**: A set of nodes grouped together. This is the entirety of your Kubernetes setup, usually consisting of one master node that controls multiple worker nodes.
+
+#### Basic commands with kubernetes
+
+**Working with Pods**
+1. **kubectl version**: check to see if kubectl is installed and it's installed version.
+2. **kubectl get pods** : list running pods
+3. **kubectl apply -f [route-to-the-config-file]** : this will process the config file.
+4. **kubectl exet -it [name-of-pod]  [command]** : run a command inside a running pod, if multiple containers are running inside a pod, kubectl will ask for the container name.
+5. **kubectl logs [pod-name]** : list the logs to a running pod.
+6. **kubectl delete [pod-name]** : delete a pod.
+7. **kubectl describe pod [pod-name]** : will list information to a specific pod.
+
