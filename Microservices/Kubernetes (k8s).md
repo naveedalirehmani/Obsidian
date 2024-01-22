@@ -25,3 +25,9 @@ Kubernetes is a container manager that helps us create, manage & monitor docker 
 6. **kubectl delete [pod-name]** : delete a pod.
 7. **kubectl describe pod [pod-name]** : will list information to a specific pod.
 
+**Working with Deployment**
+1. **kubectl get deployments** : list running pods
+2. **kubectl apply -f [route-to-the-config-file]** : this will process the config file.
+3. **kubectl logs [deployment-name]** : list the logs to a running pod.
+4. **kubectl delete [deployment-name]** : delete a pod.
+5. **kubectl describe pod [deployment-name]** : will list information to a specific pod.
