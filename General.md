@@ -5,3 +5,7 @@ Let’s say in case of a file being compiled a compiler will compile this file i
 
 #### 1. Lexical analysis.
 In this process the compiler tries to understand the syntax of our code. It tries to break down our code in to groups by identifying the keywords that we use in a programming language in case of javascript this can be const name = “Karim”.  
+
+#### 2. Parsing  
+in this step the parser will parse the out from the lexical analysis and try to create a AST (abstract syntax tree). An AST is basically our code but in a different format. Think of this as converting our code into a structure that the compiler can understand and compile. this is very common in general programming as well lets say when we create a function we expect the input to be in a specific structure because the algorithm we wrote fro this functions was written keeping in mind a input in a specific structure. So parsing is same just converting our code in a structure that the compiler expects to be and can execute.  
+  
