@@ -13,16 +13,3 @@
 	- [ ] time and space complexity
 
 ---
-
-#### System Design 
-
-- [ ] Queue Systems.
-
-
----
-### Architecting large scale application
-
-- [ ] Docker
-- [ ] Kubernetes
-- [ ] Microservices
-- [ ] 
