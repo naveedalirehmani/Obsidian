@@ -20,3 +20,14 @@ function sumNumbersUpToN(n) {
 
 console.log(sumNumbersUpToN(5));
 ```
+
+This algorithms time and space complexity of O(1).
+```javascript
+function sumNumbersUpToNFormula(n) {
+  return (n * (n + 1)) / 2;
+}
+
+console.log(sumNumbersUpToNFormula(5));
+```
+
+---
