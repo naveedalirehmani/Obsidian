@@ -31,3 +31,11 @@ console.log(sumNumbersUpToNFormula(5));
 ```
 
 ---
+
+#### Performance of Arrays & Objects.
+
+Push and Pop operations on an array have a time complexity of O(1), while shift and unshift have a O(n) has pushing new elements to the start or middle of an array means that we need to reposition all the proceeding elements in a array.
+
+Objects have a time complexity of O(1) when we are accessing, inserting or modifying properties, while searching from the elements while take O(n) amount of time.
+
+---
