@@ -55,6 +55,5 @@ A process of set of steps to accomplish a certain task.
 	4. Can the output be derived from the input?
 	5. Labelling the important pieces.
 2. **Explore Concrete examples**
-
-
-
+3. **Break it down**
+	1. Explicitly write down the steps you need to take ( very useful ), also writing these in an interview will give you an edge as you will be explaining your thought process.
