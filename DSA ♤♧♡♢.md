@@ -54,3 +54,7 @@ A process of set of steps to accomplish a certain task.
 	3. what are the expected output to the problem?
 	4. Can the output be derived from the input?
 	5. Labelling the important pieces.
+2. **Explore Concrete examples**
+
+
+
