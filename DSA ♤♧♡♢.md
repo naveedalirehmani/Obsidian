@@ -39,3 +39,18 @@ Push and Pop operations on an array have a time complexity of O(1), while shift 
 Objects have a time complexity of O(1) when we are accessing, inserting or modifying properties, while searching from the elements while take O(n) amount of time.
 
 ---
+
+#### Problem Solving Patterns.
+
+##### Algorithms?
+A process of set of steps to accomplish a certain task.
+### Problem Solving strategies.
+
+#### Devise a plan to solving a problems, finding an strategy.
+
+1. **Understanding the problem.**
+	1. Can I restate the problem?
+	2. what are the inputs that go into the problem?
+	3. what are the expected output to the problem?
+	4. Can the output be derived from the input?
+	5. Labelling the important pieces.
