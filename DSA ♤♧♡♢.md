@@ -58,4 +58,10 @@ A process of set of steps to accomplish a certain task.
 3. **Break it down**
 	1. Explicitly write down the steps you need to take ( very useful ), also writing these in an interview will give you an edge as you will be explaining your thought process.
 4. **Solve or Simplify**
+5. **Look back & Refactor**
+	1. Are you getting the expected result?
+	2. Can you understand it at a glance ( not possible all the time though ).
+	3. Can you improve the performance ( bigO ) ?
+	4. How have other people solved it?
 
+---
