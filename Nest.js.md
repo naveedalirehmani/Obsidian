@@ -24,3 +24,7 @@ to generate a controller called items.
 $ npm i -g @nestjs/cli
 $ nest new project-name
 ```
+
+#### main.ts
+Server configrations.
+
