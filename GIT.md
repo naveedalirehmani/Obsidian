@@ -7,7 +7,7 @@
 
 #### Adding files to stage and committing.
 
-- Git add . : to add all upstages files to stage.
+- Git add . : to add all unstaged files to stage.
 - Git add index.html : moving a specific file to stage.
 - Git commit -m “commit-name” : to commit stage files
 - Git commit -am “commit-name” : to add and commit files.
@@ -28,7 +28,7 @@
 
 #### Working with stash.
 
-- Git stash : to move upstaged files to clipboard.
+- Git stash : to move unstaged files to clipboard.
 - Git stash list : to list all stashes.
 - Git stash pop : to reproduce stashed files ( the most recent stash will pop)
 - Git stash apply : same as above but will not remove stash file for stash list.
@@ -54,12 +54,12 @@
 
 #### Moving back with restore.
 
-- Git restore —source HEAD~1 index.html : this will change the content of a specific file back to where it was 1 commits prior. You will lose any unstaged files. This will not move back commit history. Just the content and the new content of index.html will appear as unstaged file.
+- Git restore --source HEAD~1 index.html : this will change the content of a specific file back to where it was 1 commits prior. You will lose any unstaged files. This will not move back commit history. Just the content and the new content of index.html will appear as unstaged file.
 - After git restore —source HEAD~1 index.html you can either do git restore index.html to again go back to HEAD. Basically undoing the “git restore —source HEAD~1 index.html” command or create a new commit from here.
 
 #### Unstaging files with restore ( alternative to reset ).
 
-- Git restore —staged “file-name-here” : will unstage a specific file.g
+- Git restore --staged “file-name-here” : will unstage a specific file.g
 #### Unstaging files with reset.
 
 - Git reset “file-name” : same as above
@@ -68,7 +68,7 @@
 #### Moving back in history with reset.
 
 - Git reset “commit-hash” : delete all commit history back to a specific commit. Will keep all deleted changes in working directory.
-- Git reset “commit-hash” —hard : same as above but will not keep changes in working directory.
+- Git reset “commit-hash” --hard : same as above but will not keep changes in working directory.
 
 #### Moving back with revert.
 
@@ -82,3 +82,4 @@
 - Git fetch origin “branch-name” : this will update our origin/branch-name with the remote branch. If a developer has contributed new commits to a specific branch and our local remote/branch does not know about this we can use this command and it will update remote/branch. This will not merge only fetch new commits.
 - Git fetch : will fetch new remote/branches.
 - Git pull origin ‘branch-name’ : this will fetch latest changes on remote/branch and also merge them into our local branch and local remote/branch. Merge conflicts can arise if we have also made commits in our local branch and remote tries to merge new
+
