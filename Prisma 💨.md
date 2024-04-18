@@ -41,3 +41,32 @@ const newPost = await prisma.post.create({
 });
 		
 ```
+
+create a user and associate a post with him in one query.
+```
+
+    const newUserWithPosts = await prisma.user.create({
+      data: {
+        username: 'jane_doe',
+        email: 'jane@example.com',
+        password: 'hashed_password',
+        posts: {
+          create: [
+            {
+              title: 'Post 1',
+              content: 'Content for Post 1',
+            },
+            {
+              title: 'Post 2',
+              content: 'Content for Post 2',
+            },
+          ],
+        },
+      },
+      include: {
+        posts: true,
+      },
+    });
+
+
+```
