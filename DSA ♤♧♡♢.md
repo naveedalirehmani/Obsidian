@@ -1,6 +1,6 @@
 	
-#### Big 0
-Big O notation is a method of analyzing an algorithms performance. 2 main factors that we consider for this are time and space complexity.
+### Big 0
+==Big O notation is a method of analyzing an algorithms performance. 2 main factors that we consider for this are time and space complexity.==
 1. Time complexity
 	1. Hardware limitations are ignored.
 	2. always look at the big picture, recognizing patterns is more important.
@@ -34,17 +34,16 @@ console.log(sumNumbersUpToNFormula(5));
 
 #### Performance of Arrays & Objects.
 
-Push and Pop operations on an array have a time complexity of O(1), while shift and unshift have a O(n) has pushing new elements to the start or middle of an array means that we need to reposition all the proceeding elements in a array.
+==Push and Pop operations on an array have a time complexity of O(1), while shift and unshift have a O(n) has pushing new elements to the start or middle of an array means that we need to reposition all the proceeding elements in a array.==
 
-Objects have a time complexity of O(1) when we are accessing, inserting or modifying properties, while searching from the elements while take O(n) amount of time.
+==Objects have a time complexity of O(1) when we are accessing, inserting or modifying properties, while searching from the elements while take O(n) amount of time.==
 
 ---
-
-#### Problem Solving Patterns.
+### Problem Solving Patterns.
 
 ##### Algorithms?
 A process of set of steps to accomplish a certain task.
-### Problem Solving strategies.
+#### Problem Solving strategies.
 
 #### Devise a plan to solving a problems, finding an strategy.
 
@@ -65,3 +64,15 @@ A process of set of steps to accomplish a certain task.
 	4. How have other people solved it?
 
 ---
+### Master common problem solving patterns.
+
+1. **Frequency counter method**
+	In the frequency counter method, you count the occurrences of elements in a collection and then compare the frequencies and the values of corresponding elements in two arrays. This approach avoids using nested loops and eliminates the need to delete values.
+
+	For example, if you have a function that takes two arrays as input and checks whether each element in the first array has a corresponding element in the second array that is the square of its value. Instead of iterating through both arrays with nested loops, you can follow these steps:
+
+	1. **Count Frequencies:** Count the frequencies of each unique element in both arrays.
+	2. **Compare Frequencies:** Check if the square of each element in the first array has the same frequency in the second array.
+    
+	By doing this, you efficiently determine if every element in the first array has a matching element in the second array whose value is the square of the original element. This method is more efficient than using nested loops, especially for large datasets, as it avoids unnecessary comparisons and deletions.
+
