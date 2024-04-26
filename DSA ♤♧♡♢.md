@@ -76,3 +76,39 @@ A process of set of steps to accomplish a certain task.
     
 	By doing this, you efficiently determine if every element in the first array has a matching element in the second array whose value is the square of the original element. This method is more efficient than using nested loops, especially for large datasets, as it avoids unnecessary comparisons and deletions.
 
+	*Example:*
+	You can solve the anagram problem with this.
+```javascript
+function anagram(word1, word2) {
+  
+	if (word1.length !== word2.length) {
+		return false
+	}
+  
+	const word1Frequency = {}
+	const word2Frequency = {}
+
+	for (let letter of word1) {
+		word1Frequency[letter] = ++word1Frequency[letter] || 1
+	}
+  
+	for (let letter of word2) {
+		word2Frequency[letter] = ++word2Frequency[letter] || 1
+	}
+
+	for (let props in word1Frequency) {
+		if (!(word2Frequency[props] && word2Frequency[props] === word1Frequency[props])) {
+			return false
+		}
+	}
+
+	return true
+}
+
+console.log(anagram('iceman', 'cinema')); // Expected output: true
+console.log(anagram('hello', 'world')); // Expected output: false
+console.log(anagram('listen', 'silent')); // Expected output: true
+console.log(anagram('debit card', 'bad credit')); // Expected output: true
+console.log(anagram('test', 'rest')); // Expected output: false
+console.log(anagram('school master', 'the classroom')); // Expected output: true
+```
