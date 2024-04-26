@@ -122,3 +122,19 @@ console.log(anagram('school master', 'the classroom')); // Expected output: true
 
 	*Example Problem 2:*
 	Find add the unique values in a array of sorted elements, Here it's much easier because the input array is sorted.
+```javascript
+function countUniqueValues(sortedArray) {
+	if (!sortedArray.length) return 0;
+
+	let current = 0;
+
+	for (let index = 0; index < sortedArray.length; index++) {
+		if (!(sortedArray[current] === sortedArray[index])) {
+			current++;
+			sortedArray[current] = sortedArray[index];
+		}
+	}
+	return current + 1;
+}
+console.log(countUniqueValues([1, 1, 1, 2, 2, 3]));
+```
