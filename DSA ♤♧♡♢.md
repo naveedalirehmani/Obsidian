@@ -112,3 +112,13 @@ console.log(anagram('debit card', 'bad credit')); // Expected output: true
 console.log(anagram('test', 'rest')); // Expected output: false
 console.log(anagram('school master', 'the classroom')); // Expected output: true
 ```
+
+2. **Multiple Pointer method**
+	Creating pointers or values that correspond to an index or position and move towards the beginning, end or middle based on a certain condition 
+	Very efficient for solving problems with minimal space complexity as well
+
+	*Example Problem:* 
+	Write a function called sumZero which accepts a sorted array of integers. The function should find the first pair where the sum is 0. Return an array that includes both values that sum to zero or undefined if a pair does not exist.
+
+	*Example Problem 2:*
+	Find add the unique values in a array of sorted elements, Here it's much easier because the input array is sorted.
