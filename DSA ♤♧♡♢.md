@@ -142,3 +142,26 @@ console.log(countUniqueValues([1, 1, 1, 2, 2, 3]));
 3. **Sliding Window**
 	This pattern involves creating a window which can either be an array or number from one position to another depending on a certain condition, the window either increases or closes (and a new window is created)
 	Very useful for keeping track of a subset of data in an array/string etc.
+
+	*Example* 
+```javascript
+function maxSumSubArray(array,num) {
+
+	if(!array.length) return null;
+
+	let total = 0;
+
+	for (let index = 0; index < num; index++) {
+		total += array[index];
+	}
+	
+	let sum = total;
+
+	for (let index = num; index < array.length; index++) {
+		sum = sum - array[index-num] + array[index]
+		total = Math.max(sum,total)
+	}
+
+	return total
+}
+```
