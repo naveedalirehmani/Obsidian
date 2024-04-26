@@ -138,3 +138,7 @@ function countUniqueValues(sortedArray) {
 }
 console.log(countUniqueValues([1, 1, 1, 2, 2, 3]));
 ```
+
+3. **Sliding Window**
+	This pattern involves creating a window which can either be an array or number from one position to another depending on a certain condition, the window either increases or closes (and a new window is created)
+	Very useful for keeping track of a subset of data in an array/string etc.
