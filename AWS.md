@@ -185,3 +185,25 @@ admin
 - identity pools 
 	- Identity pools are focused on providing temporary AWS credentials for your app users to access other AWS services.
 	- Identity pools enable your authenticated users (who may have signed in using a user pool) to obtain temporary AWS credentials. 
+
+### s3-client (simple storage service)
+
+- s3-client is a way to store data on a cloud computer just like you store data on you local computer.
+- each s3 can have `100` buckets on a single account. we can also host static sites on s3 as s3 is just a way to store and access data from a cloud computer weather they that be a image, video or a index.html file.
+- to server static content you would need to allow "Static website hosting" from bucket properties section.
+- you can create a public bucket that allows access to files publicly. this means that you don't need to create a pre-signed from a IAM user that have s3 permissions enabled.
+- each object(your files) on a bucket will have a public url that you can use to access them on the internet, just like serving files from a node.js server that is serving files from a public folder statically.
+- if the bucket is not publicly accessible & you want to access the objects on them programmatically what you can do is that you can create a IAM role that has s3 permission enable & has programmatically access allowed. you can use this users access key and secret key to create a pre-signed URL and access the files on them.
+	- you can use `aws-sdk/s3-request-presigner` for this to create pre-signed urls.
+
+### regions, availability zones, vpc, subnets & more.
+
+
+### architecture
+this architecture explain how you can upload objects directly from frontend without sending files onto server.
+#### this achieves 2 things
+1. we are not putting unnecessary load onto server.
+2. we are not exposing our env's from frontend (explained later)
+
+![[Pasted image 20231130193937.png]]
+
