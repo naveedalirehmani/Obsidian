@@ -170,3 +170,18 @@ admin
 - cons are
 	- server less is stateless
 	- it has cold start 
+
+### cognito
+
+- aws cognito is a user managements service provided by aws.
+- it allows multiple user authentication & authorisation strategies. User pools are primarily designed for authentication. They are user directories that provide sign-up and sign-in options for your application users.
+- user pools are is all about user management
+- you can manage user authentication/authorisation in 3 ways
+	- hosted ui
+	- **programmatically** 
+		- aws amplify
+		- aws sdk
+	- lamda functions.
+- identity pools 
+	- Identity pools are focused on providing temporary AWS credentials for your app users to access other AWS services.
+	- Identity pools enable your authenticated users (who may have signed in using a user pool) to obtain temporary AWS credentials. 
