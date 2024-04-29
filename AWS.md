@@ -151,3 +151,22 @@ admin
 - you don't need to attach permission for each user directly, you can create a user-group and add policies to it & later add users to this user-group. also you can only attach 10 policies to user so there is a limit as well but this limit is not on user-groups.
 - you can also create custom policies.
 - in each template there are multiple objects of policies, each has effect, action & resource. which means if this policy active? what actions are allowed? such as reading or writing & on what resources? such as all s3 buckets or a 1 specific bucket.
+
+### serverless vs serverfull
+
+- in server full we are responsible for allocating resources to a server and we are rented for it.
+- ASG - auto scaling group ( you can automate the resources of a server depending on the requirements )
+- in server less aws is responsible for allocating/managing the resources for our code. 
+- in server less we are charged only if our code is executed/innovated, for example hosting a api on server-less means that we are only charged by the incoming traffic.
+- in server-less scaling is automated.
+- a single code snippet is called a aws lamda function.
+- each lamda function is charged on following factors
+	- amount of incoming requests.
+	- time duration of the code executed
+- what are events and triggers?
+	- triggers are basically event listeners that will invoke our events ( lamda function )
+	- there can be many types of triggers such as most commonly used are api gateway where aws creates a api gateway and you can make a rest request to this url to trigger the event.
+	- or you can create a trigger with alexa where you ask alexa something specific and it triggers a lamda function.
+- cons are
+	- server less is stateless
+	- it has cold start 
