@@ -141,3 +141,13 @@ admin
 
 
 ---
+
+### IAM & Root
+
+- root user have full admin access.
+- team members/services will use IAM users that have limited privileges.
+- programmatically user don't need access to aws console & vice versa you can define this while creating and IAM.
+- policies are permission attached to a IAM role. you don't have to manually define this policies aws also has predefined  templates available.
+- you don't need to attach permission for each user directly, you can create a user-group and add policies to it & later add users to this user-group. also you can only attach 10 policies to user so there is a limit as well but this limit is not on user-groups.
+- you can also create custom policies.
+- in each template there are multiple objects of policies, each has effect, action & resource. which means if this policy active? what actions are allowed? such as reading or writing & on what resources? such as all s3 buckets or a 1 specific bucket.
