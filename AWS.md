@@ -126,3 +126,18 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 sudo certbot --nginx
 ```
 
+
+---
+
+### Personal.
+[signin](https://861421557251.signin.aws.amazon.com/console)
+```
+admin
+```
+
+```
+******
+```
+
+
+---
