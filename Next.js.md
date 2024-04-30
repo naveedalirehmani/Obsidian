@@ -81,3 +81,24 @@ export async function generateStaticParams() {
 
 - By default all pages are static site generate, unless they are dynamic pages of course. If we pass cache : ‘no-store’ to fetch it will fetch on each render. Converting the page into server side render instead of static.
 - ==If we don’t use fetch we can export some variables for a component to change the behaviour of the page. Some variables are dynamic = ‘auto’, dynamicParams = true, fetchCache = ‘auto’, revalidate = 0;==
+
+---
+### Parallel Routes.
+
+- With parallel routes as the name suggests we can render 2 or more routes in a layout like this.
+```tsx
+export default function Layout(props: {
+  children: React.ReactNode
+  analytics: React.ReactNode
+  team: React.ReactNode
+}) {
+  return (
+    <>
+      {props.children}
+      {props.team}
+      {props.analytics}
+    </>
+  )
+}  
+```
+- create a `@team` and `@analytics` folder in a segment for this, each of these folders will have a `page.tsx` that is the main page.
