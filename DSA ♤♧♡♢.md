@@ -165,3 +165,168 @@ function maxSumSubArray(array,num) {
 	return total
 }
 ```
+
+
+---
+### Recursion 
+==A process (a function in our case) that calls itself==
+
+1. **Helper Method Recursion**: 
+	Uses an outer function for setup and an inner function for recursive calls.
+2. **Pure Recursion**: 
+	Solves problems with a single function, calling itself to break down the problem until reaching a base case.
+3. **Base Case**: 
+	Stopping point for recursion, providing a known result and preventing infinite loops.
+
+*Example* : finding factorial
+```javascript
+function factorial(n) {
+    if (n === 0 || n === 1) {
+        return 1;
+    }
+    return n * factorial(n - 1);
+}
+
+const number = 5;
+const result = factorial(number);
+console.log(`The factorial of ${number} is: ${result}`);
+
+```
+
+*Example* : collecting odd values
+```javascript
+function collectOddValues(array){
+
+	let result = []
+
+	if(!array.length) return result
+
+	if(!(array[0] % 2 === 0)) result.push(array[0])
+	
+	result = [...result, ...collectOddValues(array.slice(1))]
+
+	return result
+}
+
+console.log(collectOddValues([1,2,3,4,5,6,7,8,9]))
+```
+
+
+----
+### Searching algorithms.
+
+#### Describe what a searching algorithm is
+==A searching algorithm is a step-by-step process used to find a specific item (such as a number or a piece of data) within a collection of items (like an array or a string).==
+	
+2. **Implement linear search on arrays**
+	Linear search is a searching algorithm where we look for a specific value in a dataset one by one, so here we don't skip a value until we find it, if found we may return it's index or if not we may return -1. big O for this is O(n).
+	*Example*
+```javascript
+function lenearSearch (array,find){
+  
+	//loop through the list.
+	for (let index = 0; index < array.length; index++) {
+		const element = array[index];
+
+		// returning index if element if found.
+		if(element === find){
+			return index
+		}
+	}
+
+	// returning -1 if element is not found.
+	return -1
+}
+
+console.log(lenearSearch([1,2,3,4,5,6,7,8,9],1))
+```
+
+3. **Implement binary search on sorted arrays**
+	Binary search is a more efficient searching algorithm, especially for sorted collections. It works by repeatedly dividing the search interval in half until the target item is found or the interval is empty. 
+	1. we divide the data set in half.
+	2. check to see if middle values if greater than or less than the findValue
+	3. if greater we shift left to middle and if less we shift right to middle.
+	4. we repeat the process until a value is found or there is no more values left to divide.
+	Big O for this if O(logn) better than O(n) almost as same as O(1) according to some dictionaries. very suitable for large dataset, but only works on sorted dataset.
+	*Example*
+```javascript
+function binarySearch(arr, target) {
+    let left = 0;
+    let right = arr.length - 1;
+
+    while (left <= right) {
+        let mid = Math.floor((left + right) / 2);
+
+        // Check if target is present at mid
+        if (arr[mid] === target) {
+            return mid;
+        }
+
+        // If target is greater, ignore left half
+        if (arr[mid] < target) {
+            left = mid + 1;
+        } else {
+            // If target is smaller, ignore right half
+            right = mid - 1;
+        }
+    }
+
+	// If we reach here, then the element was not present
+    return -1;
+}
+
+// Example usage:
+console.log( binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9], 5) );
+```
+
+4. **Implement a naive string searching algorithm**
+	*Example 1 Naive approach*
+```javascript
+function stringPattern(string, pattern) {
+
+	let counter = 0;
+	
+	for (let index = 0; index < string.length; index++) {
+		for (let innerIndex = 0; innerIndex < pattern.length; innerIndex++) {
+			if(!(pattern[innerIndex] === string[index+innerIndex])){
+				break;
+			}
+			if(innerIndex == pattern.length-1){
+				counter++
+			}
+		}
+	}
+
+	return counter;
+}
+
+console.log(stringPattern('omglaksomgjdhglkajshdomglkgjahomgsdg', "omg"));
+```
+
+5. **Implement the KMP string searching algorithm**
+
+---
+### Sorting algorithms.
+
+- Implement bubble sort
+- ﻿﻿Implement selection sort
+- ﻿﻿Implement insertion sort
+- ﻿﻿Understand why it is important to learn these simpler sorting algorithms
+
+---
+### Data structures Introduction.
+
+#### What do they do?
+==Data structures are collections of values, the relationships among them, and the functions or operations that can be applied to the data.==
+#### Why so many???
+==Different data structures excel at different things. Some are highly specialized, while others (like arrays) are more generally used.==
+
+
+# Hacker Rank - Tiktok assessment
+
+1. Dijkstra algorithm
+2. Dequeue - Doubly ended queue - & queues
+3. 
+
+
+
