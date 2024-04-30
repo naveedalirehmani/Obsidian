@@ -75,3 +75,9 @@ export async function generateStaticParams() {
 - error.tsx is nested this means that if there is no error.tsx in a segment parent segment will catch the error. But it is better to add error.tsx with each segment.
 - We can also use this as fallback component to a react suspense, so that is a component throws error we can catch it.
 - error.tsx will receive 2 props error and reset. Error is message and reset if a method that can be called to try and reloading the component that throws error.
+
+---
+### Server side rendering.
+
+- By default all pages are static site generate, unless they are dynamic pages of course. If we pass cache : ‘no-store’ to fetch it will fetch on each render. Converting the page into server side render instead of static.
+- ==If we don’t use fetch we can export some variables for a component to change the behaviour of the page. Some variables are dynamic = ‘auto’, dynamicParams = true, fetchCache = ‘auto’, revalidate = 0;==
