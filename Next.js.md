@@ -66,3 +66,12 @@ export async function generateStaticParams() {
 - In next.js before a component is mounted on screen it is render on server and then served to client, and then hydration kicks in. So rendering the page on server and then serving it takes time. During this period the loading.tsx file will be rendered.
 - If a segment as loading.tsx file, all dynamic routes in that segment will also automatically use this loading.tsx file
 - We can also use loading.tsx with react suspense. For example if there are 10 components in a page. next.js does not has to only render the page on the server but also all the components in the pages which might take a while wrapping them in suspense means that this components are streamed. Streamed mean that components are rendered one by one in order and sent to client one by one in chunks where each component is a chunk. For this just wrap for component in a react suspence tag and add a loading component to fallback of suspense.
+
+---
+### error.tsx
+
+- With each segment we can add a file called error.tsx which is a fallback if an error occurs in the dynamic route of page.tsx of segment. This will not catch errors in layouts or template. For this add a error.tsx in the parent of segment.
+- In app we can add global-error.tsx for global error catching. 
+- error.tsx is nested this means that if there is no error.tsx in a segment parent segment will catch the error. But it is better to add error.tsx with each segment.
+- We can also use this as fallback component to a react suspense, so that is a component throws error we can catch it.
+- error.tsx will receive 2 props error and reset. Error is message and reset if a method that can be called to try and reloading the component that throws error.
