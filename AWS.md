@@ -1,4 +1,4 @@
-### How to create a very simple aws ubunto instance
+l### How to create a very simple aws ubunto instance
 
 1. create a __aws instance.
 2. log into this __aws instance__ with your __ssh key__. ( ssh is just secure shell to connecting remote computers. )
@@ -136,7 +136,7 @@ admin
 ```
 
 ```
-******
+7@(ciT6]
 ```
 
 
@@ -206,4 +206,42 @@ this architecture explain how you can upload objects directly from frontend with
 2. we are not exposing our env's from frontend (explained later)
 
 ![[Pasted image 20231130193937.png]]
+
+
+
+```
+server {
+    server_name www.tamilmatchmaking.com tamilmatchmaking.com;  # Your EC2 public DNS
+
+    location / {
+        proxy_pass http://localhost:3000;  # Proxy pass to your app on port 4000
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/api.tamilmatchmaking.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/api.tamilmatchmaking.com/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+}
+server {
+    if ($host = www.tamilmatchmaking.com) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+    if ($host = tamilmatchmaking.com){
+        return 301 https://www.$host$request_uri;
+    }
+
+    listen 80;
+    server_name www.tamilmatchmaking.com;
+    return 404; # managed by Certbot
+
+
+}
+```
 
