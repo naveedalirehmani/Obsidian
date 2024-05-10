@@ -70,3 +70,108 @@ e:g queryClient = useQueryClient
 keepPreviousdata will keep previous query data, for example when working with dynamic queries each item is fetch with it’s respective id
 every time we will receive new data, but when id changes data changes and old cached data is deleted this will keep track and save all
 previous fetched queries by id, so let’s say it will make our application faster, such as pagination.
+
+
+---
+### Notes.
+
+```tsx
+const { mutate: createShop, isLoading: creating } = useCreateShopMutation();
+```
+
+```tsx
+export const useCreateShopMutation = () => {
+
+const queryClient = useQueryClient();
+const router = useRouter();
+
+  
+return useMutation(shopClient.create, {
+	onSuccess: () => {
+		const { permissions } = getAuthCredentials();
+		if (hasAccess(adminOnly, permissions)) {
+			return router.push(Routes.adminMyShops);
+		}
+	router.push(Routes.dashboard);
+	},
+	onSettled: () => {
+		queryClient.invalidateQueries(API_ENDPOINTS.SHOPS);
+		},
+	});
+};
+```
+
+**crud factory**
+```tsx
+export function crudFactory<Type, QueryParams extends LanguageParam, InputType>(
+
+endpoint: string
+
+) {
+
+return {
+
+all(params: QueryParams) {
+
+return HttpClient.get<Type[]>(endpoint, params);
+
+},
+
+paginated(params: QueryParams) {
+
+return HttpClient.get<PaginatorInfo<Type>>(endpoint, params);
+
+},
+
+get({ slug, language }: GetParams) {
+
+return HttpClient.get<Type>(`${endpoint}/${slug}`, { language });
+
+},
+
+create(data: InputType) {
+
+return HttpClient.post<Type>(endpoint, data);
+
+},
+
+update({ id, ...input }: Partial<InputType> & { id: string }) {
+
+return HttpClient.put<Type>(`${endpoint}/${id}`, input);
+
+},
+
+delete({ id }: { id: string }) {
+
+return HttpClient.delete<boolean>(`${endpoint}/${id}`);
+
+},
+
+};
+
+}
+```
+
+**http client**
+```tsx
+export class HttpClient {
+
+static async get<T>(url: string, params?: unknown) {
+
+const response = await Axios.get<T>(url, { params });
+
+return response.data;
+
+}
+
+  
+
+static async post<T>(url: string, data: unknown, options?: any) {
+
+const response = await Axios.post<T>(url, data, options);
+
+return response.data;
+
+}
+```
+
