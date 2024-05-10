@@ -28,3 +28,7 @@ this is working but there is a better way of doing this with third party librari
 - pm2 monit => this create a monitor in terminal showing a lot more detail on the status of ever process.
 - pm2 reload server => here server is the name of the process and all our processes are called server, reload and restart are very different, restart will restart app processes at once will reload will restart them one by one, so that there is always one process running, this insures that our server has not downtime.
 
+
+### Package.json & Package.lock.json
+  
+- instead of creating our own modules we can use third party modules, like we can replace http module that comes with node.js with axios, we keep track of the the modules/packages that our project depends on with package.json file where we can also configure our own project which is also a package that depends on axios, and axios can also depend on another package, so there is a dependency tree, like axios uses follow request for any redirects that our url may require. so when we install axios npm also installs follow-request which will not be listed in our package.json file but in the axios module package.json file. if two third party modules depend on a same package lets say axios and mongoose both use follow-request it will not install twice.
