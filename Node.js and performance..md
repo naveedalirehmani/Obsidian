@@ -32,3 +32,27 @@ this is working but there is a better way of doing this with third party librari
 ### Package.json & Package.lock.json
   
 - instead of creating our own modules we can use third party modules, like we can replace http module that comes with node.js with axios, we keep track of the the modules/packages that our project depends on with package.json file where we can also configure our own project which is also a package that depends on axios, and axios can also depend on another package, so there is a dependency tree, like axios uses follow request for any redirects that our url may require. so when we install axios npm also installs follow-request which will not be listed in our package.json file but in the axios module package.json file. if two third party modules depend on a same package lets say axios and mongoose both use follow-request it will not install twice.
+
+#### MAJOR.MINOR.PATCH
+**2.1.3**
+- Here 2 is major, changes that completed change the package.
+- 1 is a minor changes that adds extra functionality.
+- 3 this is for just bug fixes.
+- Package.lock.json file
+- this file keeps track of extra information such as exact version number of the package we are using and also keeps track of all the package the package depends on, you might have seen ^2.1.3 in package.json file, here ^ means that the package will install with the latest minor version.
+- sometimes when installing a package we get high vulneberity error, this means that a security issue was fixed in a latest version of this packages that we have not install, npm audit will check to see if their are any security issue in the current version of the package and npm audit fix will fix it just by installing the newer version where security issue was fixed by the package developers.
+- If we have to different server like client and server for a react and node.js file , we would what usually do is use 2 different terminals to manage both servers and their npm commands, what we can also do is create a package.json file in the main folder where both client and server live and manage both servers from their
+
+```json
+"scripts": {
+"test": "echo \"Error: no test specified\" && exit 1",
+"server": "cd server && npm run dev", // first cd to server folder and then run npm run dev
+"client": "npm run start --prefix client", // first cd to client folder and then run npm run start
+"install-client": "npm install --prefix client", // first cd to client and run npm install
+"install-server": "npm install --prefix server", // first cd to server and run npm install
+"install": "npm run install-client && npm run install-server" // run both npm run install-client and then run npm run intsall-server.
+"watch": "npm run server & npm run client”, // run both commands npm run server && npm run client, here single & means that do not weight for first script to end.
+"deploy": "npm run build --prefix client && npm run server", // this does alot runs npm run build in client folder and then runs npm run server which then first will cd into server and run npm run dev.
+
+}
+```
