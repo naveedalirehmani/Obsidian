@@ -1,0 +1,42 @@
+{
+	"nodes":[
+		{"type":"text","text":"Docker on a MacOS","id":"67fea594c7e8f1e5","x":-2640,"y":1032,"width":820,"height":777,"color":"4"},
+		{"type":"text","text":"","id":"d94cb846970d1845","x":-2554,"y":1112,"width":648,"height":455},
+		{"type":"text","text":"Macos/Windows","id":"7c1f5be6a400f657","x":-2554,"y":1599,"width":648,"height":73,"color":"5"},
+		{"type":"text","text":"Your Computers Hadware","id":"0cdb6416b0e77f82","x":-2554,"y":1699,"width":648,"height":73,"color":"4"},
+		{"type":"text","text":"running \nprocess","id":"ae9fba5f4cbe2b8d","x":-2526,"y":1152,"width":180,"height":255},
+		{"type":"text","text":"Linux Virtual Machine","id":"c8d7d4f694afaecd","x":-2526,"y":1447,"width":600,"height":80,"color":"6"},
+		{"type":"text","text":"running process","id":"37138895bd3e2045","x":-2106,"y":1152,"width":180,"height":255},
+		{"type":"text","text":"running \nprocess","id":"5c85a2599e2be005","x":-2311,"y":1152,"width":165,"height":255},
+		{"id":"205a861180a24b3c","type":"file","file":"Microservices/Docker.md","x":-1620,"y":849,"width":720,"height":750,"color":"3"},
+		{"type":"file","file":"Microservices/Architecture..md","id":"a0b66bbd9c4206a3","x":-2016,"y":-480,"width":1127,"height":960,"color":"3"},
+		{"type":"text","text":"Microservices","id":"bebde551a5c1b204","x":-1732,"y":-680,"width":560,"height":60,"color":"1"},
+		{"type":"text","text":"Linux Kernel","id":"1d9145460a6624f2","x":-2526,"y":1287,"width":600,"height":105,"color":"5"},
+		{"id":"a7a8725614010318","type":"file","file":"Microservices/Kubernetes (k8s).md","x":-760,"y":1112,"width":975,"height":832,"color":"3"},
+		{"id":"a71eec438532ebf5","type":"text","text":"Genesis Block","x":20,"y":-58,"width":360,"height":360,"color":"3"},
+		{"id":"85b5693f173bee7a","type":"text","text":"The header for the current block.","x":40,"y":2,"width":320,"height":50,"color":"4"},
+		{"id":"25a0ce95a7c9a459","type":"text","text":"Transaction History of the block","x":40,"y":72,"width":320,"height":50,"color":"6"},
+		{"id":"01b29c6a485af7c0","type":"text","text":"The nounce","x":40,"y":140,"width":320,"height":53,"color":"1"},
+		{"id":"e6d92151e9d148fe","type":"text","text":"Block 1","x":500,"y":-58,"width":360,"height":385,"color":"3"},
+		{"id":"ac52fd5f39b70813","type":"text","text":"The header for the current block.","x":520,"y":2,"width":320,"height":50,"color":"4"},
+		{"id":"3cca268ba6bcf6e2","type":"text","text":"Transaction History of the block","x":520,"y":72,"width":320,"height":50,"color":"6"},
+		{"id":"c502c792937b387f","type":"text","text":"The nounce","x":520,"y":140,"width":320,"height":53,"color":"1"},
+		{"id":"2e4b56a55a1bf3a1","type":"text","text":"Block 2","x":960,"y":-58,"width":360,"height":385,"color":"3"},
+		{"id":"93514401d1215f31","type":"text","text":"The header for the current block.","x":980,"y":2,"width":320,"height":50,"color":"4"},
+		{"id":"e384909905f2d17c","type":"text","text":"Transaction History of the block","x":980,"y":72,"width":320,"height":50,"color":"6"},
+		{"id":"b5e8dd4b8723bad7","type":"text","text":"The nounce","x":980,"y":140,"width":320,"height":53,"color":"1"},
+		{"id":"95a895ed06246ddc","type":"text","text":"Hash Finger-print of the block","x":40,"y":277,"width":320,"height":50,"color":"#545454"},
+		{"id":"2831eda03a1b7d4f","type":"text","text":"Hash Finger-print of the block","x":520,"y":302,"width":320,"height":50,"color":"#545454"},
+		{"id":"e4214dcea9d161dc","type":"text","text":"Hash Finger-print of the block","x":980,"y":302,"width":320,"height":50,"color":"#545454"},
+		{"id":"b82e334b151205de","type":"text","text":"hash fingerprint of the previous block","x":940,"y":210,"width":320,"height":70,"color":"5"},
+		{"id":"bffa1caf3100ea64","type":"text","text":"hash fingerprint of the previous block","x":480,"y":210,"width":320,"height":70,"color":"5"}
+	],
+	"edges":[
+		{"id":"78e94c4ad0010064","fromNode":"205a861180a24b3c","fromSide":"left","toNode":"67fea594c7e8f1e5","toSide":"right","color":"5"},
+		{"id":"42f5a227cc8bfdd6","fromNode":"bebde551a5c1b204","fromSide":"bottom","toNode":"a0b66bbd9c4206a3","toSide":"top","color":"5"},
+		{"id":"feb3009a225ad899","fromNode":"205a861180a24b3c","fromSide":"right","toNode":"a7a8725614010318","toSide":"left","color":"4"},
+		{"id":"d00a62ff61c86f4c","fromNode":"a0b66bbd9c4206a3","fromSide":"bottom","toNode":"205a861180a24b3c","toSide":"top","color":"5"},
+		{"id":"31e4489087e3e2de","fromNode":"bffa1caf3100ea64","fromSide":"left","toNode":"95a895ed06246ddc","toSide":"bottom"},
+		{"id":"9aa25705c4819a63","fromNode":"b82e334b151205de","fromSide":"left","toNode":"2831eda03a1b7d4f","toSide":"bottom"}
+	]
+}
