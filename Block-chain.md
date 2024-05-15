@@ -6,7 +6,7 @@ Hashing is a fundamental concept in computer science and cryptography. It refers
 
 The primary purpose of hashing is to create a digital fingerprint or unique identifier for the input data.
 
-**Characteristics.** 
+**Characteristics.**
 
 - **Deterministic:** For the same input, the hash function will always produce the same hash value.
 - **Quick Computation:** The hash function should be fast and efficient, allowing for rapid generation of hash values.
@@ -14,7 +14,7 @@ The primary purpose of hashing is to create a digital fingerprint or unique iden
 - Small Changes in Input Produce Significant Changes in Hash: Even a minor modification in the input data should result in a completely different hash value.
 - **Collision Resistance:** It should be highly improbable for two different inputs to produce the same hash value.
 
-**Some of the hash functions and their characteristics are.** 
+**Some of the hash functions and their characteristics are.**
 
 - **MD5 (Message Digest Algorithm 5)**: 128-bit hash value. However, MD5 is now considered to be weak for cryptographic purposes due to vulnerabilities and collision attacks discovered over the years.
 - **SHA-1 (Secure Hash Algorithm 1)**: 160-bit hash value. Similar to MD5, SHA-1 is considered weak for security applications due to vulnerabilities. It is no longer recommended for cryptographic purposes.
@@ -38,3 +38,30 @@ Transactions in the context of blockchain refer to the transfer or exchange of d
 - Transaction Fees.
 
 ---  
+
+**_ONL-BTC_**
+
+**Mining.**
+mining is indeed the process of verifying transactions in a blockchain network. When a transaction is initiated, it needs to be validated by miners before it can be included in a block and added to the blockchain.
+
+Miners earn money through two primary mechanisms: mining rewards and transaction fees.
+
+- **Mining Rewards:** When a miner successfully mines a new block and adds it to the blockchain, they are rewarded with a specific amount of cryptocurrency. In Bitcoin, for instance, the current block reward is 6.25 bitcoins (as of September 2021), but this value is halved approximately every four years through a process known as the "Bitcoin halving." Initially, the block reward was 50 bitcoins, and it has gone through several halvings over time. Other blockchain networks may have different reward structures.
+- **Transaction Fees:** In addition to mining rewards, miners also earn transaction fees associated with the transactions included in the blocks they mine. When a user initiates a transaction, they have the option to attach a transaction fee to incentivize miners to prioritize and include their transaction in the next block. Miners, therefore, have an incentive to include transactions with higher fees to maximize their earnings. Transaction fees serve as an additional incentive for miners and contribute to the security and sustainability of the blockchain network.
+
+**Proof Of Work and consensus mechanism.**
+block chain is a distributed ledger. this means that each node in a block-chain network has a copy of this ledger. this gives the power to all nodes to verify if a ledger coming from a single node has been mutated or not, through a mechanism called consensus mechanism. there are 2 ways consensus mechanism can work. POW and POS. Here I will be explaining proof of work.
+
+all of the transactions are added to a block and the miners to proof that they are actually contributing to the network have to compete in finding a specific hash fingerprint (not exactly the same fingerprint because that can not be decided in advance as new transaction are still coming in, so we just find a hash fingerprint that in decimal has value less then a specific number. The smaller the number is the harder it is to find the fingerprint. The difficulty of the the block is decided based on the previous history of how long did it took the miners to actually mine the previous block if it was fairly easy the difficulty for the upcoming block is set high if it was hard meaning that it took more time then expected, the difficulty is set low in this case). 
+
+The input for this fingerprint consist of 4 things the transaction history of the block + the nounce of the block which miners can change to find a specific match + hash fingerprint of the previous block + the header for the block. once a specific miner succeeds in finding this specific fingerprint he gets to mint a new block, for which he gets rewarded in 2 ways, the mining reward + the transaction fee.
+
+so this was how a block is minted. now moving onto how this ledger is verified in the network and what makes mutating the ledger very hard and the block-chain data save from the hands of those who want to curupt the system by double spending the currency.
+
+firstly, each block in the block-chain contains the hashprint for the previous block ( expect the genesis block ) this means that if we mutate the transaction history of a single block we would not just need to re mint this block but also every block after.
+
+secondly, every one in the network has the copy to the ledger. this means even if we succeed in mining every block in the block-chain after mutation it will still not be the same for others in the network because, others ledger history + blockhash will not match with ours, which then would cause the network to reject our ledger.  
+  
+One thing to remember here is that as long as the majority of the nodes in the network are honest. Block-chain is safe.
+
+---
