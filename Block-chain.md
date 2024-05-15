@@ -129,3 +129,8 @@ an anonymity set refers to a group of participants or addresses within a cryptoc
 In the context of mixing pools or transaction mixing techniques, the anonymity set refers to the number of participants or transactions that are combined or mixed together.
 
 ---
+
+**Deterministic**
+Deterministic refers to a process or system that produces the same output or result when given the same inputs or starting conditions. In other words, in a deterministic system, there is a one-to-one correspondence between the inputs and the outputs, and there is no randomness or uncertainty involved.
+
+---
