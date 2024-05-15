@@ -65,3 +65,37 @@ secondly, every one in the network has the copy to the ledger. this means even i
 One thing to remember here is that as long as the majority of the nodes in the network are honest. Block-chain is safe.
 
 ---
+
+**_ONL-BTC_**
+
+**Mining pool.**
+Mining pools are collaborative groups of cryptocurrency miners who combine their computing power to increase their chances of successfully mining 
+
+blocks and earning rewards.
+
+- **Pooling Computing Power**: In a mining pool, individual miners contribute their computing power by connecting their mining hardware or software to the pool's mining server. This pooling of resources allows the pool to have a higher overall hash rate, increasing the chances of finding valid blocks.
+- **Block Validation and Rewards**: When a mining pool successfully mines a block, the reward is distributed among the pool members based on their contributions. The pool calculates each member's share of the work by considering factors such as the number of shares submitted, hash rate, or other contribution metrics. The more work a miner contributes, the larger their share of the reward.
+- **Share Submission and Difficulty**: Instead of mining for full blocks, miners in a pool work on finding "shares," which are partial solutions to the mining problem. These shares are easier to find and validate compared to full blocks. Each share represents a miner's contribution to the pool's overall mining effort.
+
+**Mining Pool Benefits**:
+
+- Increased Chances of Earning Rewards
+- Steady and Predictable Income
+- Reduced Variability and Risk
+  
+**Recording Contributions**
+
+- **Shares**: The primary mechanism for tracking contributions is through shares. When a miner discovers a share, they submit it to the pool. The pool keeps track of each miner's submitted shares and uses them to determine their proportional contribution.
+
+	1. Miners in the pool attempt to find a specific target value or "fingerprint," such as a hash with 20 leading zeros, by iterating through different inputs.
+	2. When a miner discovers a partial solution (a share) that meets a certain difficulty level set by the pool, they submit that share to the pool's server.
+	3. The pool keeps track of the number of shares submitted by each miner over a certain period, such as a specific time frame or a number of solved shares.
+	4. The pool calculates each miner's hash rate based on the number of shares submitted within the defined period. The hash rate represents the miner's computational power relative to the total pool hash rate.
+	5. Rewards are distributed to miners based on their proportional contribution to the pool's overall computational power, not solely based on the number of shares submitted. The exact method for calculating rewards may vary depending on the pool's specific rules and reward distribution model.
+
+
+- **Mining Difficulty**: The mining pool adjusts the difficulty level for share submissions based on the pool's overall hash rate. This adjustment ensures that each miner's contribution is weighted fairly, regardless of their individual hardware capabilities.
+- **Stratum Protocol**: Mining pools often use the Stratum protocol, which provides a communication framework between miners and the pool's server. This protocol enables efficient share submission, real-time statistics, and transparent tracking of contributions.
+- **Authentication and Worker IDs**: Each miner connecting to a mining pool has a unique worker ID associated with their mining software or hardware. The pool tracks the worker IDs and associates shares and contributions with the respective miners.
+
+---
