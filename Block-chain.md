@@ -99,3 +99,33 @@ blocks and earning rewards.
 - **Authentication and Worker IDs**: Each miner connecting to a mining pool has a unique worker ID associated with their mining software or hardware. The pool tracks the worker IDs and associates shares and contributions with the respective miners.
 
 ---
+
+**Anonymity and pseudonymity on blockchain.**
+Anonymity and pseudonymity are two related but distinct concepts related to identity and privacy. Here's an explanation of each term
+
+- **Anonymity:** Anonymity refers to the condition of being unknown or unidentifiable. When someone is anonymous, their true identity is completely concealed and cannot be traced back to them. 
+- **Pseudonymity:** Pseudonymity involves the use of a pseudonym or a fictitious name or identifier that represents an individual. In this case, a person may choose to operate under a different name or username to interact or transact within a system or community.
+
+**Unlink ability**
+Unlinkability in blockchain refers to the property of ensuring that transactions or activities conducted by participants on the blockchain cannot be easily linked or associated with their real-world identities or other transactions they have performed.
+
+**To hide you identity on blockchain.**
+
+**What not to do.**
+
+- Address association: If a user publicly associates their blockchain address with their real-world identity, either through online profiles, public statements, or transactions.
+- On-chain analysis: Sophisticated analysis techniques can be used to analyze the blockchain's transaction history, network patterns, and metadata to try to uncover the real-world identity behind specific addresses.
+
+**What to do.**
+
+- Use multiple addresses.
+- Utilize privacy-focused cryptocurrencies: Consider using privacy-focused cryptocurrencies like Monero or Zcash that incorporate privacy-enhancing features by default, such as obfuscated transaction amounts or shielded addresses.
+- Employ additional privacy techniques: Combine blockchain usage with privacy-enhancing technologies like VPNs or the Tor network to obfuscate IP addresses.
+
+**Anonymity set**
+an anonymity set refers to a group of participants or addresses within a cryptocurrency network that share similar transactional characteristics, making it difficult to determine the true origin or destination of a specific transaction. It is a measure of the privacy or anonymity provided by a particular blockchain protocol.
+
+**Anonymity set in mixing pools**
+In the context of mixing pools or transaction mixing techniques, the anonymity set refers to the number of participants or transactions that are combined or mixed together.
+
+---
