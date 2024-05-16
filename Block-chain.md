@@ -137,3 +137,8 @@ Deterministic refers to a process or system that produces the same output or res
 
 **Consensus mechanism** 
 In a decentralized system or blockchain network, the consensus mechanism ensures that participants collectively agree on the validity and integrity of the data. To achieve this, every participant typically verifies the data to ensure that it has not been altered or tampered with.
+
+#### POW VS POS.
+
+**Proof of Work (PoW):**
+In PoW, miners compete to solve complex mathematical puzzles in order to add new blocks to the blockchain and receive rewards. The puzzles require substantial computational power and energy consumption. The miner who successfully solves the puzzle first gets the right to add the next block and is rewarded with newly minted cryptocurrency. Miners investing their time and computational power is POW here.
