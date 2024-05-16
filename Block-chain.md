@@ -134,3 +134,6 @@ In the context of mixing pools or transaction mixing techniques, the anonymity s
 Deterministic refers to a process or system that produces the same output or result when given the same inputs or starting conditions. In other words, in a deterministic system, there is a one-to-one correspondence between the inputs and the outputs, and there is no randomness or uncertainty involved.
 
 ---
+
+**Consensus mechanism** 
+In a decentralized system or blockchain network, the consensus mechanism ensures that participants collectively agree on the validity and integrity of the data. To achieve this, every participant typically verifies the data to ensure that it has not been altered or tampered with.
