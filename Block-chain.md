@@ -134,3 +134,19 @@ In the context of mixing pools or transaction mixing techniques, the anonymity s
 Deterministic refers to a process or system that produces the same output or result when given the same inputs or starting conditions. In other words, in a deterministic system, there is a one-to-one correspondence between the inputs and the outputs, and there is no randomness or uncertainty involved.
 
 ---
+
+**Consensus mechanism** 
+In a decentralized system or blockchain network, the consensus mechanism ensures that participants collectively agree on the validity and integrity of the data. To achieve this, every participant typically verifies the data to ensure that it has not been altered or tampered with.
+
+#### POW VS POS.
+
+**Proof of Work (PoW):**
+In PoW, miners compete to solve complex mathematical puzzles in order to add new blocks to the blockchain and receive rewards. The puzzles require substantial computational power and energy consumption. The miner who successfully solves the puzzle first gets the right to add the next block and is rewarded with newly minted cryptocurrency. Miners investing their time and computational power is POW here.
+
+**Proof of Stake (PoS):**
+In PoS, validators are chosen to create new blocks based on the number of cryptocurrency tokens they hold and "stake" as collateral. Validators lock up a certain amount of tokens in their wallets as a security deposit, providing proof of their stake in the network. This was miners proof that in case the try to manipulate the network they have their tokens at stack to loss, which proof their intention to stay honest.
+
+- Some PoS systems select validators randomly, where the probability of selection is proportional to the number of tokens staked. Validators with a larger stake have a higher chance of being chosen.
+- Other PoS systems may also consider factors such as the length of time the tokens have been staked. Validators who have staked their tokens for a longer duration may have a higher probability of being selected.
+
+---  
