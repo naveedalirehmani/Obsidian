@@ -153,3 +153,9 @@ In PoS, validators are chosen to create new blocks based on the number of crypto
 
 **Forking**:  
 Forking in blockchain refers to the creation of a new branch or version of a blockchain. It occurs when there is a divergence in the consensus rules or protocols followed by different participants in the blockchain network.
+
+**Hard Fork**: 
+A hard fork is a type of fork that introduces a significant change to the blockchain protocol, making the new version incompatible with the previous version. When a hard fork happens, the blockchain splits into two separate chains, each following its own set of rules.
+
+**Soft Fork**: 
+A soft fork is a type of fork that introduces a backward-compatible change to the blockchain protocol. The new rules added in a soft fork are still compatible with the previous version, allowing both upgraded and non-upgraded nodes to continue operating on the same blockchain.
