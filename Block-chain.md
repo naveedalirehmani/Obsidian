@@ -159,3 +159,22 @@ A hard fork is a type of fork that introduces a significant change to the blockc
 
 **Soft Fork**: 
 A soft fork is a type of fork that introduces a backward-compatible change to the blockchain protocol. The new rules added in a soft fork are still compatible with the previous version, allowing both upgraded and non-upgraded nodes to continue operating on the same blockchain.
+
+---
+
+**_ONL-ETH_**
+
+**Smart contract:**
+smart contracts are contracts on the ethereum blockchain that have the terms and condition of the contract written into the code. This means that everyone on the ethereum blockchain can view the terms and condition of the contract and verify if transactions are occurring according to the terms of the contract. Let’s say you want buy 1ETH on ethereum blockchain you send 1K$ to someone who is selling after receiving the money he refuses to obey by the agreement. Smart contracts can prevent such scam, it is an automated block of code that executes when the terms of contract are fulfilled. This means it acts as an escrow. You deposit the money, the seller deposits the ETH this means that the terms are meet. So the contract automatically sends you the ETH and him the dollars.
+
+another use of this is to buy real estate, lets say there is this NFT on the blockchain that holds the ownership to a house,
+instead of buying this NFT from a node directly you can use to perform this transaction through a smart contract.
+
+- There are also some problems with smart contract, for example in the above mentioned scenario what if someone claims the owner ship of your house and does not care about the NFT you own, well in this case government does not abide by the agreements made on blockchain.
+
+- There is also very high Gas fee and people purposely leave errors and loophools in the smart contracts to steal peoples money.
+- People also use smart contract to bet on real world data, such as betting own you favorite time. But how does the s-contract get this real world data? We use oracles for this. Oracles can be configured with s-contracts and provide real world data to them.
+
+- In simple words think of smart contracts as account managed by code and as a developer you can write this code and automate how this account behaves. If you want it to be a shopkeeper, it behaves as shopkeeper, that buys or sells EHT for US dollars.
+
+  
