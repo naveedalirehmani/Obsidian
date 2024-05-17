@@ -150,3 +150,6 @@ In PoS, validators are chosen to create new blocks based on the number of crypto
 - Other PoS systems may also consider factors such as the length of time the tokens have been staked. Validators who have staked their tokens for a longer duration may have a higher probability of being selected.
 
 ---  
+
+**Forking**:  
+Forking in blockchain refers to the creation of a new branch or version of a blockchain. It occurs when there is a divergence in the consensus rules or protocols followed by different participants in the blockchain network.
