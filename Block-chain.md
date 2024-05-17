@@ -178,3 +178,20 @@ instead of buying this NFT from a node directly you can use to perform this tran
 - In simple words think of smart contracts as account managed by code and as a developer you can write this code and automate how this account behaves. If you want it to be a shopkeeper, it behaves as shopkeeper, that buys or sells EHT for US dollars.
 
   
+
+**Liquidity pools.**
+
+**Flash loans.**
+
+Flash loans loans are loans that require no collateral tral and need to be paid back instantly. 
+
+- Transaction in crypto can have multiple steps in them unlike real worlds transactions.
+
+For example in one transaction you can take a flash loans from Aave in tokens, use these tokens to buy ethereum on sushi-swap, sell these ethereum at a higher price on uni-swap and then finally pay back tokens to Save. If incase you are not able to complete a transaction completely, these transactions are reverted as if it never existed.
+
+- You also need to pay the gas fee. for these transaction.
+- Bots are involved in this heavly so chances of making profit this way is fairly low
+
+Where does this money come from? Aave have investors that lend money to aave which lends money to you, takes 0.9 percent as interest and a big portion of this goes back to investors
+
+---  
