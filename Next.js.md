@@ -161,3 +161,21 @@ export default function ClientComponent({
 ```
 
 ---
+### client side components
+
+- All components inside the default app router folder are server side rendered, using a special directive 'use client' at the top of the file makes this component client side rendered.
+- Any component imported into a client side component is implicitly also render client side.
+- so you want to render a server component inside a client side, you should pass it as children, importing it will implicity convert the server component into client component.
+- above happens only if SSC is imported into CSC not the other way around! you **CAN** import CSC into SSC.
+- if you have a library that uses react hooks, for example a carousal library, you can not directly import it into a SSC. The work around is import it into a completely new component that has 'use client' directive and than import it into SSC.
+
+**NOTE :** CSC are not actually fully render on client side, but are rendered on server side and Javascript is latter hydrated on client side
+
+**When to use client side components?** 
+- ==to add interactivity
+- ==to use react hooks
+- ==to access browser specific APIs
+
+**Tips**
+- move client components to the bottom of component tree, so that you don't client side render components that don't need to, example is that when only search bar in navbar has dynamic interactivity, add that that logic in search bar not in navbar.
+- props moving for server component to client or vice versa must always be string. things like function cannot be passed!
