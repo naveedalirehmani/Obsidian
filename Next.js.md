@@ -120,3 +120,21 @@ export default function Layout(props: {
 - the specific process to achieve this is challenging to explain in text.
 
 ---
+### server side vs client side.
+
+**Not to do this**
+```tsx
+'use client'
+ 
+import ServerComponent from './Server-Component'
+ 
+export default function ClientComponent() {
+  const [count, setCount] = useState(0)
+  return (
+    <>
+      <button onClick={() => setCount(count + 1)}>{count}</button>
+      <ServerComponent />
+    </>
+  )
+}
+```
