@@ -112,3 +112,11 @@ export default function Layout(props: {
 }  
 ```
 - create a `@team` and `@analytics` folder in a segment for this, each of these folders will have a `page.tsx` that is the main page.
+
+---
+### Intercepting routes.
+
+- route intercepting is a very new feature, this allows us to intercept a route and render it's content in a another route. let's consider this scenario, you want to move from route /movie to route /movie/1234 tradition what would happen is that when you click on a list of movies you will be directed to that route and it will be rendered, but before we go to a route we can also intercept it and render it's content in a modal. this is implemented in instagram desktop, when you are watching reels from messages the reel pops up in a modal, upon refreshing the reel opens in a full window. this is also implemented in reddit.
+- the specific process to achieve this is challenging to explain in text.
+
+---
