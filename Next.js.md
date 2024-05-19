@@ -179,3 +179,16 @@ export default function ClientComponent({
 **Tips**
 - move client components to the bottom of component tree, so that you don't client side render components that don't need to, example is that when only search bar in navbar has dynamic interactivity, add that that logic in search bar not in navbar.
 - props moving for server component to client or vice versa must always be string. things like function cannot be passed!
+
+### server side components
+
+- you don't actually need to pass props for a SSC to SSC because of 2 reasons
+	1. any data fetched in one component is cached so calling the api twice will not actually duplicate the request.
+	2. if you need to share logic in between, we can you concepts like singleton. 
+
+==__Component Render Sequence for server side components
+1. First, all data for a given page is fetched on the server.
+2. The server then renders the HTML for the page.
+3. The HTML, CSS, and JavaScript for the page are sent to the client.
+4. A non-interactive user interface is shown using the generated HTML, and CSS.
+5. Finally, React [hydrates](https://react.dev/reference/react-dom/client/hydrateRoot#hydrating-server-rendered-html) the user interface to make it interactive.==
