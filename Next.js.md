@@ -1,4 +1,4 @@
-
+  
 ### Major change
 
 - By default all pages are server side rendered and to achieve this we can just use fetch no need to export functions like serverSideGenerate just like we did in next 12. now the new things is that all pages are cached. Once a page is loaded it’s results is cached this means that going to the same page again will be like visiting a statically generated page, we can also mimic the behaviour of ISR by passing in revalidate to fetch.
@@ -17,6 +17,16 @@
 - Soft navigation. Only works for prefetched routes, or if routes don’t have dynamic params.
 - Can use href=‘/about#section-id-here’, here we can use # to goto a specific part of the page by giving the same id as #saction-id-here
 - Can use replace to delete browser routing history
+```tsx
+href={{
+	pathname: `${
+		shop ? item?.href(shop?.toString()!) : item?.href
+	}`,
+	query: {
+		parents: label,
+	},
+}}
+```
 
 ---
 ### Groups
@@ -45,7 +55,7 @@
 - [[…folder-name] ] will catch all dynamic routes, including the leaf 🍁 (page.tsx)
 
 ---
-### GenerateStaticParams
+### GenerateStaticParams (ONLY-PAGES)
 
 - Export this function from a dynamic route’s page.tsx to pre-render the dynamic routes returned for this method. Because next will know in advance what dynamic routes are going to be called.
 
@@ -102,3 +112,83 @@ export default function Layout(props: {
 }  
 ```
 - create a `@team` and `@analytics` folder in a segment for this, each of these folders will have a `page.tsx` that is the main page.
+
+---
+### Intercepting routes.
+
+- route intercepting is a very new feature, this allows us to intercept a route and render it's content in a another route. let's consider this scenario, you want to move from route /movie to route /movie/1234 tradition what would happen is that when you click on a list of movies you will be directed to that route and it will be rendered, but before we go to a route we can also intercept it and render it's content in a modal. this is implemented in instagram desktop, when you are watching reels from messages the reel pops up in a modal, upon refreshing the reel opens in a full window. this is also implemented in reddit.
+- the specific process to achieve this is challenging to explain in text.
+
+---
+### server side vs client side.
+
+**Not to do this**
+```tsx
+'use client'
+ 
+import ServerComponent from './Server-Component'
+ 
+export default function ClientComponent() {
+  const [count, setCount] = useState(0)
+  return (
+    <>
+      <button onClick={() => setCount(count + 1)}>{count}</button>
+      <ServerComponent />
+    </>
+  )
+}
+```
+
+**do this instead!**
+```tsx
+'use client'
+ 
+import { useState } from 'react'
+ 
+export default function ClientComponent({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  const [count, setCount] = useState(0)
+  return (
+    <>
+      <button onClick={() => setCount(count + 1)}>{count}</button>
+      {children}
+    </>
+  )
+}
+```
+
+---
+### client side components
+
+- All components inside the default app router folder are server side rendered, using a special directive 'use client' at the top of the file makes this component client side rendered.
+- Any component imported into a client side component is implicitly also render client side.
+- so you want to render a server component inside a client side, you should pass it as children, importing it will implicity convert the server component into client component.
+- above happens only if SSC is imported into CSC not the other way around! you **CAN** import CSC into SSC.
+- if you have a library that uses react hooks, for example a carousal library, you can not directly import it into a SSC. The work around is import it into a completely new component that has 'use client' directive and than import it into SSC.
+
+**NOTE :** CSC are not actually fully render on client side, but are rendered on server side and Javascript is latter hydrated on client side
+
+**When to use client side components?** 
+- ==to add interactivity
+- ==to use react hooks
+- ==to access browser specific APIs
+
+**Tips**
+- move client components to the bottom of component tree, so that you don't client side render components that don't need to, example is that when only search bar in navbar has dynamic interactivity, add that that logic in search bar not in navbar.
+- props moving for server component to client or vice versa must always be string. things like function cannot be passed!
+
+### server side components
+
+- you don't actually need to pass props for a SSC to SSC because of 2 reasons
+	1. any data fetched in one component is cached so calling the api twice will not actually duplicate the request.
+	2. if you need to share logic in between, we can you concepts like singleton. 
+
+==__Component Render Sequence for server side components
+1. First, all data for a given page is fetched on the server.
+2. The server then renders the HTML for the page.
+3. The HTML, CSS, and JavaScript for the page are sent to the client.
+4. A non-interactive user interface is shown using the generated HTML, and CSS.
+5. Finally, React [hydrates](https://react.dev/reference/react-dom/client/hydrateRoot#hydrating-server-rendered-html) the user interface to make it interactive.==
