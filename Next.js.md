@@ -1,4 +1,4 @@
-
+  
 ### Major change
 
 - By default all pages are server side rendered and to achieve this we can just use fetch no need to export functions like serverSideGenerate just like we did in next 12. now the new things is that all pages are cached. Once a page is loaded it’s results is cached this means that going to the same page again will be like visiting a statically generated page, we can also mimic the behaviour of ISR by passing in revalidate to fetch.
@@ -17,6 +17,16 @@
 - Soft navigation. Only works for prefetched routes, or if routes don’t have dynamic params.
 - Can use href=‘/about#section-id-here’, here we can use # to goto a specific part of the page by giving the same id as #saction-id-here
 - Can use replace to delete browser routing history
+```tsx
+href={{
+	pathname: `${
+		shop ? item?.href(shop?.toString()!) : item?.href
+	}`,
+	query: {
+		parents: label,
+	},
+}}
+```
 
 ---
 ### Groups
@@ -45,7 +55,7 @@
 - [[…folder-name] ] will catch all dynamic routes, including the leaf 🍁 (page.tsx)
 
 ---
-### GenerateStaticParams
+### GenerateStaticParams (ONLY-PAGES)
 
 - Export this function from a dynamic route’s page.tsx to pre-render the dynamic routes returned for this method. Because next will know in advance what dynamic routes are going to be called.
 
