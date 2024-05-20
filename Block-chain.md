@@ -216,3 +216,15 @@ So when you want to send ETH on ethereum blockchain you contact miners that run 
 
 - One important thing to note here is that there are also application that can run these computations off the EVM and only use EVM to validate the transaction (this I will explain later)
 - Chose a timing for transaction when there are less transaction being requested on the blockchain, such as in the weekends between 12 am t0 4 am. (NOTE this is not in PST)
+
+**Gas Limit**
+
+There are two gas limits one I have discussed earlier that is the gas limit on each block. Another is one that is set by the user, this limit is simple the maximum amount of gas units that I am willing to pay for one my transactions as a user, this is to prevent situations such as the transaction consuming more gas units then my predicted value. So that I don’t pay way more than I intend to. All this because we cannot exactly tell the amount of gas units each transaction will take we can only predict.  
+  
+three factors that make it hard to exactly tell how much each transaction will take are.
+
+- Complexity of the computation.
+- Amount of data that will be precessed.
+- State of the blockchain.
+
+---
