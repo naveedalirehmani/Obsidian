@@ -200,3 +200,52 @@ In Next.js, we can utilize server components to execute application logic on the
 you can use tags on fetch calls to refetch them in next.js or you can revalidate by route path.
    
 ---
+### fonts
+
+You can import fonts from next/font/google and create a font variable like this. you may notice that there are few variables that have a weight property, this is required for non variable fonts you can find the list of all variable fonts here [variable-fonts](https://fonts.google.com/variablefonts) 
+```ts
+import { Inter, Cedarville_Cursive, Public_Sans } from "next/font/google";
+
+const cursive = Cedarville_Cursive({ subsets: ["latin"], variable: "--cursive", weight:["400"] });
+const sans = Public_Sans({ subsets: ["latin"], variable: "--sans", display:'swap' });
+```
+
+then define it on the body like to to make this changes apply, also you can do this on each layout level
+```tsx
+<body className={cn(cursive.className)}>
+```
+
+**Method 2**
+you can also add a variable property to the font variable function as I did in first example and then reference this variable in your global css file like this.
+```css
+p{
+	font-family: var("--cursive");
+}
+```
+
+and define it on body like this.
+```tsx
+<body className={`${cursive.variable}`}>
+```
+
+you can also download local fonts and reference them like this.
+```tsx
+import localFont from 'next/font/local'
+
+const myFont = localFont({
+	src: '../static-fonts/Besley-BoldItalic.ttf', 
+	display: 'swap',
+}）
+
+export default function LocalFontLayout ({children}){
+
+return (
+	‹div className={myFont.className}>
+		{children}
+	</div>
+	)
+}
+```
+
+
+---
