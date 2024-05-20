@@ -192,3 +192,172 @@ export default function ClientComponent({
 3. The HTML, CSS, and JavaScript for the page are sent to the client.
 4. A non-interactive user interface is shown using the generated HTML, and CSS.
 5. Finally, React [hydrates](https://react.dev/reference/react-dom/client/hydrateRoot#hydrating-server-rendered-html) the user interface to make it interactive.==
+
+#### Server actions.
+
+In Next.js, we can utilize server components to execute application logic on the server. For instance, if you wish to submit form data to a backend API, traditionally, you'd need to convert a server component into a client component to employ React hooks. However, a new approach allows us to create functions with a `use server` directive placed at the top. These functions, referred to as server actions, are executed on the server. While you can also employ server actions in client components, you'd need to export the server action to its own module for this purpose.
+
+you can use tags on fetch calls to refetch them in next.js or you can revalidate by route path.
+   
+---
+### fonts
+
+You can import fonts from next/font/google and create a font variable like this. you may notice that there are few variables that have a weight property, this is required for non variable fonts you can find the list of all variable fonts here [variable-fonts](https://fonts.google.com/variablefonts) 
+```ts
+import { Inter, Cedarville_Cursive, Public_Sans } from "next/font/google";
+
+const cursive = Cedarville_Cursive({ subsets: ["latin"], variable: "--cursive", weight:["400"] });
+const sans = Public_Sans({ subsets: ["latin"], variable: "--sans", display:'swap' });
+```
+
+then define it on the body like to to make this changes apply, also you can do this on each layout level
+```tsx
+<body className={cn(cursive.className)}>
+```
+
+**Method 2**
+you can also add a variable property to the font variable function as I did in first example and then reference this variable in your global css file like this.
+```css
+p{
+	font-family: var("--cursive");
+}
+```
+
+and define it on body like this.
+```tsx
+<body className={`${cursive.variable}`}>
+```
+
+you can also download local fonts and reference them like this.
+```tsx
+import localFont from 'next/font/local'
+
+const myFont = localFont({
+	src: '../static-fonts/Besley-BoldItalic.ttf', 
+	display: 'swap',
+}）
+
+export default function LocalFontLayout ({children}){
+
+return (
+	‹div className={myFont.className}>
+		{children}
+	</div>
+	)
+}
+```
+
+
+---
+
+### Next.js Api
+
+#### Request.
+
+**Search Params**
+```javascript
+// Given a request to /home, pathname is /home
+request.nextUrl.pathname
+// Given a request to /home?name=lee, searchParams is { 'name': 'lee' }
+request.nextUrl.searchParams
+```
+
+**getting cookies**
+```javascript
+//access
+const accessToken = request.cookies.get("access_token_flower_box")?.value;
+
+//deleting
+request.cookies.delete('experiments')
+
+//has
+request.cookies.has('experiments')
+
+//clear all
+request.cookies.clear()
+```
+
+**getting headers**
+```javascript
+let ip = request.headers.get('X-Forwarded-For')
+```
+
+**redirecting**
+```javascript
+import { redirect } from 'next/navigation'
+ 
+export async function GET(request: Request) {
+  redirect('https://nextjs.org/')
+}
+```
+
+**slugs**
+```typescript
+//app/items/[slug]/route.ts
+export async function GET(
+  request: Request,
+  { params }: { params: { slug: string } }
+) {
+  const slug = params.slug // 'a', 'b', or 'c'
+}
+```
+
+#### Response.
+
+```javascript
+import { NextResponse } from 'next/server'
+ 
+export async function GET(request: Request) {
+  return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 })
+}
+```
+
+---
+
+# Next folder structure.
+
+Folder Structure:
+
+```plaintext
+├── src/                     # Main source code for the application
+│   ├── components/          # Reusable UI components
+│   │   ├── ui/              # Basic UI components like buttons, inputs, etc.
+│   │   └── layout/          # Components that dictate major page structure
+│   │       ├── Header.js
+│   │       ├── Footer.js
+│   │       └── ...
+│   │
+│   ├── pages/               # Pages directory for Next.js routing
+│   │   ├── api/             # API routes
+│   │   │   └── ...
+│   │   ├── _app.js          # Custom App component
+│   │   ├── index.js         # Homepage
+│   │   └── ...
+│   │
+│   ├── hooks/               # Custom React hooks
+│   │   └── useCustomHook.js
+│   │
+│   ├── utils/               # Utility functions and helpers
+│   │   └── ...
+│   │
+│   ├── styles/              # Global styles and CSS modules
+│   │   ├── globals.css
+│   │   └── ...
+│   │
+│   ├── services/            # Services for external API calls
+│   │   └── api.js
+|   |   └── userService.ts
+│   │
+│   └── lib/                 # Library code and third-party integrations
+│       └── ...
+│
+├── styles/                  # (Optional) Global styles, if not using CSS-in-JS
+│   └── ...
+│
+├── .env.local               # Local environment variables
+├── .env.production          # Production environment variables
+├── next.config.js           # Next.js configuration file
+├── postcss.config.js        # PostCSS configuration
+├── tailwind.config.js       # Tailwind CSS configuration (if used)
+└── package.json>)
+```
