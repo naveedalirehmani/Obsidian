@@ -192,3 +192,11 @@ export default function ClientComponent({
 3. The HTML, CSS, and JavaScript for the page are sent to the client.
 4. A non-interactive user interface is shown using the generated HTML, and CSS.
 5. Finally, React [hydrates](https://react.dev/reference/react-dom/client/hydrateRoot#hydrating-server-rendered-html) the user interface to make it interactive.==
+
+#### Server actions.
+
+In Next.js, we can utilize server components to execute application logic on the server. For instance, if you wish to submit form data to a backend API, traditionally, you'd need to convert a server component into a client component to employ React hooks. However, a new approach allows us to create functions with a `use server` directive placed at the top. These functions, referred to as server actions, are executed on the server. While you can also employ server actions in client components, you'd need to export the server action to its own module for this purpose.
+
+you can use tags on fetch calls to refetch them in next.js or you can revalidate by route path.
+   
+---
