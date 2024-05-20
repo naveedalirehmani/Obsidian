@@ -290,3 +290,26 @@ export async function GET(request: Request) {
   redirect('https://nextjs.org/')
 }
 ```
+
+**slugs**
+```typescript
+//app/items/[slug]/route.ts
+export async function GET(
+  request: Request,
+  { params }: { params: { slug: string } }
+) {
+  const slug = params.slug // 'a', 'b', or 'c'
+}
+```
+
+#### Response.
+
+```javascript
+import { NextResponse } from 'next/server'
+ 
+export async function GET(request: Request) {
+  return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 })
+}
+```
+
+---
