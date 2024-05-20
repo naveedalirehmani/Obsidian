@@ -11,7 +11,7 @@ The primary purpose of hashing is to create a digital fingerprint or unique iden
 - **Deterministic:** For the same input, the hash function will always produce the same hash value.
 - **Quick Computation:** The hash function should be fast and efficient, allowing for rapid generation of hash values.
 - **Preimage Resistance:** Given the hash value, it should be computationally infeasible to determine the original input data.
-- Small Changes in Input Produce Significant Changes in Hash: Even a minor modification in the input data should result in a completely different hash value.
+- **Small Changes in Input Produce Significant Changes in Hash:** Even a minor modification in the input data should result in a completely different hash value.
 - **Collision Resistance:** It should be highly improbable for two different inputs to produce the same hash value.
 
 **Some of the hash functions and their characteristics are.**
@@ -53,6 +53,8 @@ Miners earn money through two primary mechanisms: mining rewards and transaction
 block chain is a distributed ledger. this means that each node in a block-chain network has a copy of this ledger. this gives the power to all nodes to verify if a ledger coming from a single node has been mutated or not, through a mechanism called consensus mechanism. there are 2 ways consensus mechanism can work. POW and POS. Here I will be explaining proof of work.
 
 all of the transactions are added to a block and the miners to proof that they are actually contributing to the network have to compete in finding a specific hash fingerprint (not exactly the same fingerprint because that can not be decided in advance as new transaction are still coming in, so we just find a hash fingerprint that in decimal has value less then a specific number. The smaller the number is the harder it is to find the fingerprint. The difficulty of the the block is decided based on the previous history of how long did it took the miners to actually mine the previous block if it was fairly easy the difficulty for the upcoming block is set high if it was hard meaning that it took more time then expected, the difficulty is set low in this case). 
+
+![[Pasted image 20240508123841.png]]
 
 The input for this fingerprint consist of 4 things the transaction history of the block + the nounce of the block which miners can change to find a specific match + hash fingerprint of the previous block + the header for the block. once a specific miner succeeds in finding this specific fingerprint he gets to mint a new block, for which he gets rewarded in 2 ways, the mining reward + the transaction fee.
 
@@ -173,7 +175,7 @@ instead of buying this NFT from a node directly you can use to perform this tran
 - There are also some problems with smart contract, for example in the above mentioned scenario what if someone claims the owner ship of your house and does not care about the NFT you own, well in this case government does not abide by the agreements made on blockchain.
 
 - There is also very high Gas fee and people purposely leave errors and loophools in the smart contracts to steal peoples money.
-- People also use smart contract to bet on real world data, such as betting own you favorite time. But how does the s-contract get this real world data? We use oracles for this. Oracles can be configured with s-contracts and provide real world data to them.
+- People also use smart contract to bet on real world data, such as betting own you favorite team. But how does the s-contract get this real world data? We use oracles for this. Oracles can be configured with s-contracts and provide real world data to them.
 
 - In simple words think of smart contracts as account managed by code and as a developer you can write this code and automate how this account behaves. If you want it to be a shopkeeper, it behaves as shopkeeper, that buys or sells EHT for US dollars.
 
@@ -195,3 +197,17 @@ For example in one transaction you can take a flash loans from Aave in tokens, u
 Where does this money come from? Aave have investors that lend money to aave which lends money to you, takes 0.9 percent as interest and a big portion of this goes back to investors
 
 ---  
+
+**_ONL-ETH_**
+  
+**Gas**
+
+gas is the unit of measure for the computation price on the ethereum EVM, for exam to perform one addition on EVM you need to pay 3 gas and to multiple you need 5, to send ETH you need 2100.  
+miners run these EVM’s on their machines which performs blockchain transactions virtually, so when you need to let say send ETH to an account you need to pay 2100 gas for this. Few things to not here.
+
+- Each gas unit has a minimum gas fee/unit, and this changes on each newly block minted this can increase or decrease. This is directly proportional to the number of users using the blockchain. Another factor is also the price of ETH in dollars as directly proportional.
+- On each block the total number of gas units that can be consumed by all transactions is 30 miliion.
+
+So when you want to send ETH on ethereum blockchain you contact miners that run these transactions for you on EVM, these transactions consume gas units. One thing to not here is the miners don’t just accept every transaction request. They accept only transaction request that are more beneficial from them. This means that when you want to send ETH you not such pay the base price for gas unit you also pay extra price, this amount is upto you. The more you pay the more chances are that a miner why prioritise your request because miners will not just accept all request they will only accept transaction that have most gas/unit price paid. So that they don’t just reach the limit on a block on less paid transactions.  
+
+- Gas was introduce to reward the miners and stop attackers from running smart contracts that run in a loop.
