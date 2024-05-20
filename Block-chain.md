@@ -211,3 +211,8 @@ miners run these EVM’s on their machines which performs blockchain transaction
 So when you want to send ETH on ethereum blockchain you contact miners that run these transactions for you on EVM, these transactions consume gas units. One thing to not here is the miners don’t just accept every transaction request. They accept only transaction request that are more beneficial from them. This means that when you want to send ETH you not such pay the base price for gas unit you also pay extra price, this amount is upto you. The more you pay the more chances are that a miner why prioritise your request because miners will not just accept all request they will only accept transaction that have most gas/unit price paid. So that they don’t just reach the limit on a block on less paid transactions.  
 
 - Gas was introduce to reward the miners and stop attackers from running smart contracts that run in a loop.
+
+**How can you pay less**
+
+- One important thing to note here is that there are also application that can run these computations off the EVM and only use EVM to validate the transaction (this I will explain later)
+- Chose a timing for transaction when there are less transaction being requested on the blockchain, such as in the weekends between 12 am t0 4 am. (NOTE this is not in PST)
