@@ -313,3 +313,51 @@ export async function GET(request: Request) {
 ```
 
 ---
+
+# Next folder structure.
+
+Folder Structure:
+
+```plaintext
+├── src/                     # Main source code for the application
+│   ├── components/          # Reusable UI components
+│   │   ├── ui/              # Basic UI components like buttons, inputs, etc.
+│   │   └── layout/          # Components that dictate major page structure
+│   │       ├── Header.js
+│   │       ├── Footer.js
+│   │       └── ...
+│   │
+│   ├── pages/               # Pages directory for Next.js routing
+│   │   ├── api/             # API routes
+│   │   │   └── ...
+│   │   ├── _app.js          # Custom App component
+│   │   ├── index.js         # Homepage
+│   │   └── ...
+│   │
+│   ├── hooks/               # Custom React hooks
+│   │   └── useCustomHook.js
+│   │
+│   ├── utils/               # Utility functions and helpers
+│   │   └── ...
+│   │
+│   ├── styles/              # Global styles and CSS modules
+│   │   ├── globals.css
+│   │   └── ...
+│   │
+│   ├── services/            # Services for external API calls
+│   │   └── api.js
+|   |   └── userService.ts
+│   │
+│   └── lib/                 # Library code and third-party integrations
+│       └── ...
+│
+├── styles/                  # (Optional) Global styles, if not using CSS-in-JS
+│   └── ...
+│
+├── .env.local               # Local environment variables
+├── .env.production          # Production environment variables
+├── next.config.js           # Next.js configuration file
+├── postcss.config.js        # PostCSS configuration
+├── tailwind.config.js       # Tailwind CSS configuration (if used)
+└── package.json>)
+```
