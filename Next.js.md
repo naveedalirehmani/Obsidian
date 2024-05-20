@@ -249,3 +249,15 @@ return (
 
 
 ---
+
+### Next.js Api
+
+#### Request.
+
+**Search Params**
+```javascript
+// Given a request to /home, pathname is /home
+request.nextUrl.pathname
+// Given a request to /home?name=lee, searchParams is { 'name': 'lee' }
+request.nextUrl.searchParams
+```
