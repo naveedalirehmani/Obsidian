@@ -261,3 +261,18 @@ request.nextUrl.pathname
 // Given a request to /home?name=lee, searchParams is { 'name': 'lee' }
 request.nextUrl.searchParams
 ```
+
+**getting cookies**
+```javascript
+//access
+const accessToken = request.cookies.get("access_token_flower_box")?.value;
+
+//deleting
+request.cookies.delete('experiments')
+
+//has
+request.cookies.has('experiments')
+
+//clear all
+request.cookies.clear()
+```
