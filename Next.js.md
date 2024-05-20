@@ -276,3 +276,17 @@ request.cookies.has('experiments')
 //clear all
 request.cookies.clear()
 ```
+
+**getting headers**
+```javascript
+let ip = request.headers.get('X-Forwarded-For')
+```
+
+**redirecting**
+```javascript
+import { redirect } from 'next/navigation'
+ 
+export async function GET(request: Request) {
+  redirect('https://nextjs.org/')
+}
+```
