@@ -5,3 +5,7 @@
 ### Maps
 maps are similar to objects in javascript.
 ![[Pasted image 20240509153514.png]]
+
+
+### Arrays
+![[Pasted image 20240509154753.png]]
