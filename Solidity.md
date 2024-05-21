@@ -77,3 +77,96 @@ contract Derived is Intermediate {
 }
 
 ```
+
+### Contract to contract communication.
+two contract can communicate to each other. what are the requirement’s?
+1. methods in a contract that are supposed to be called from another should have visibility external.
+2. you need to create a interface for the function that will be called.
+
+**code example : user contract**
+```ts
+// SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.0;
+
+// 1️⃣ Create a new Player and save it to players mapping with the given data
+
+contract User {
+    struct Player {
+        address playerAddress;
+        string username;
+        uint256 score;
+    }
+
+    mapping(address => Player) public players;
+
+    function createUser(address userAddress, string memory username) external {
+        require(players[userAddress].playerAddress == address(0), "User already exists");
+
+        // Create a new player here 👇
+        Player memory newPlayer;
+        newPlayer.playerAddress = userAddress;
+        newPlayer.username = username;
+        newPlayer.score = 0;
+
+        players[userAddress] = newPlayer;
+    }
+}
+
+```
+
+**game contract**
+```ts
+// SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.0;
+
+// 2️⃣ Set up a connection to the User Contract throught IUser in constructor
+// 3️⃣ Call the createUser function with the correct inputs
+
+interface IUser {
+    function createUser(address userAddress, string memory username) external;
+}
+
+contract Game {
+    uint public gameCount;
+    IUser public userContract;
+
+    constructor(address _userContractAddress) {
+        // CODE HERE
+        userContract = IUser(_userContractAddress);
+    }
+
+    function startGame(string memory username) external {
+        // Create a user in the User contract
+        gameCount++;
+        // CODE HERE
+        userContract.createUser(msg.sender, username);
+    }
+}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
