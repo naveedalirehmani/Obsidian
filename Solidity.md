@@ -30,3 +30,8 @@ maps are similar to objects in javascript.
 2. **View**: Functions declared as `view` (formerly `constant` before Solidity version 0.4.17) do not modify the state of the contract. They are used to read data from the blockchain without modifying it.
 3. **Payable**: Functions declared as `payable` can receive Ether along with the function call. They are used when you want to allow users to send Ether to the contract when calling the function. Payable functions can modify the contract's state.
 4. **Nonpayable (default)**: Functions that do not have a state mutability specifier explicitly defined are considered `nonpayable` by default. They can modify the state of the contract but cannot receive Ether.
+
+### is 
+use is keyword to extend a drived class.
+### abstract
+use abstract instead of contract to state that this class is only meant to be inherited from. Not to be used as a stand alone contract.
