@@ -35,3 +35,45 @@ maps are similar to objects in javascript.
 use is keyword to extend a drived class.
 ### abstract
 use abstract instead of contract to state that this class is only meant to be inherited from. Not to be used as a stand alone contract.
+
+### classes
+```ts
+pragma solidity ^0.8.0;
+
+contract Base {
+    uint256 private baseValue;
+
+    constructor(uint256 _baseInitialValue) {
+        baseValue = _baseInitialValue;
+    }
+
+    function getValue() public view virtual returns (uint256) {
+        return baseValue;
+    }
+}
+
+contract Intermediate is Base {
+    uint256 private intermediateValue;
+
+    constructor(uint256 _baseInitialValue, uint256 _intermediateInitialValue) Base(_baseInitialValue) {
+        intermediateValue = _intermediateInitialValue;
+    }
+
+    function getValue() public view virtual override returns (uint256) {
+        return intermediateValue;
+    }
+}
+
+contract Derived is Intermediate {
+    uint256 private derivedValue;
+
+    constructor(uint256 _baseInitialValue, uint256 _intermediateInitialValue, uint256 _derivedInitialValue) Intermediate(_baseInitialValue, _intermediateInitialValue) {
+        derivedValue = _derivedInitialValue;
+    }
+
+    function getValue() public view override returns (uint256) {
+        return derivedValue;
+    }
+}
+
+```
