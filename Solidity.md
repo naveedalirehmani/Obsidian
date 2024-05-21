@@ -24,3 +24,9 @@ maps are similar to objects in javascript.
 | private              | No                          | No                      | No                              | Yes                      |     |
 | internal             | Yes                         | No                      | No                              | Yes                      |     |
 	
+### State mutabilities 
+
+1. **Pure**: Functions declared as `pure` do not read or modify the state of the contract. They are used when you want to perform computations based only on the provided parameters and return a value without interacting with the blockchain.
+2. **View**: Functions declared as `view` (formerly `constant` before Solidity version 0.4.17) do not modify the state of the contract. They are used to read data from the blockchain without modifying it.
+3. **Payable**: Functions declared as `payable` can receive Ether along with the function call. They are used when you want to allow users to send Ether to the contract when calling the function. Payable functions can modify the contract's state.
+4. **Nonpayable (default)**: Functions that do not have a state mutability specifier explicitly defined are considered `nonpayable` by default. They can modify the state of the contract but cannot receive Ether.
