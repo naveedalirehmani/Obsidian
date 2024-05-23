@@ -228,3 +228,152 @@ three factors that make it hard to exactly tell how much each transaction will t
 - State of the blockchain.
 
 ---
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+            Gas 
+
+liquidity pools
+
+flash loans 
+
+EVM,  
+
+turing machine. 
+
+UTXO’s
+
+creating a metamask wallet and understanding the 12 phrases.
+
+  
+Blockchain
+
+Cryptocurrency
+
+Consensus Mechanism
+
+Smart Contracts
+
+Decentralization
+
+Immutable Ledger
+
+Public vs. Private Blockchain
+
+Tokenization
+
+DApps (Decentralized Applications)
+
+Interoperability
+
+Fork
+
+Permissioned vs. Permissionless
+
+Scalability
+
+Privacy and Confidentiality
+
+Blockchain Intermediaries
+
+Oracles
+
+Token Standards
+
+Governance
+
+Sidechains
+
+Off-Chain Scaling Solutions
+
+  
+
+  
+
+To Read -
+
+  
+
+- Dedicated mixes.
+
+- Mixing fee
+
+- Mixing pool
+
+- Reliability  issues in mixing pools
+
+- Use uniforms transactions
+
+- Why mixing pools failed.
+
+- Decentralising the mixings pools
+
+- Coin join
+
+  
+
+Best practicies for anonymity in mixing pools
+
+Certainly! Here are some best practices for transaction mixing, client channel attacks, client-side automation, and privacy-friendly techniques:
+
+1. Transaction Mixing Best Practices:
+
+    * Choose a reputable mixing service: Select a mixing service or protocol that has a good reputation for privacy and security.
+
+    * Use a large anonymity set: Opt for mixing pools or services that have a large number of participants to increase the anonymity set and make it harder to trace transactions.
+
+    * Mix multiple times: Consider mixing your transactions multiple times to further obfuscate the transactional flow.
+
+    * Randomize transaction amounts: Mix transactions with varying amounts to make it more difficult to link inputs and outputs.
+
+2. Client Channel Attacks:
+
+3. Client channel attacks refer to potential vulnerabilities in the communication channels between the user and the mixing service. To mitigate these attacks:
+
+    * Use encrypted communication: Ensure that the communication between your device and the mixing service is encrypted using protocols such as HTTPS or VPNs.
+
+    * Validate SSL certificates: Verify the authenticity of SSL certificates to prevent man-in-the-middle attacks.
+
+    * Be cautious of phishing attempts: Avoid clicking on suspicious links or providing sensitive information to unknown sources.
+
+4. Client-Side Automation:
+
+5. Automating the client-side process of transaction mixing can improve convenience and reduce user error. Consider the following:
+
+    * Use trusted automation tools: Utilize reputable software or tools that automate the transaction mixing process, but ensure they come from trusted sources.
+
+    * Verify the integrity of automation tools: Check the authenticity and integrity of the automation tools before using them to avoid potential malware or compromise.
+
+6. Privacy-Friendly Techniques:
+
+    * Use privacy-focused cryptocurrencies: Consider using privacy-centric cryptocurrencies like Monero or Zcash, which offer enhanced privacy features by default.
+
+    * Utilize stealth addresses: Stealth addresses enable the receiver to generate a unique address for each transaction, making it harder to track the recipient's identity.
+
+    * Zero-knowledge proofs: Explore protocols that utilize zero-knowledge proofs, such as zk-SNARKs (Zero-Knowledge Succinct Non-Interactive Argument of Knowledge), which allow for the verification of transactions without revealing sensitive information.
+
+    * Employ VPNs and Tor: Utilize privacy-enhancing technologies like Virtual Private Networks (VPNs) or the Tor network to obfuscate your IP address and online activities.
+
+It's important to note that while these practices can enhance privacy, they do not provide foolproof anonymity. Careful consideration of the specific tools, protocols, and potential risks is essential when adopting these techniques.
+
+  
+
+  
+
+Terminologies.
