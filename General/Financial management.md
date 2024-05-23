@@ -7,3 +7,8 @@ value of money with time decreases (which is discount rate here) so if a project
 ![[Pasted image 20231007225407.png]]
 
 IRR basically  tells us the specific value of discount rate that will make this investment not profitable. for example if a project returns 200 with investment of 100 in 10 years with discount rate 1%. than this project might be profitable but if the discount rate is something like 100% this project might not be profitable. so IRR is basically  finding that specific discount rate value that will make this investment  not profitable
+
+
+#### PI (profitability index)
+basically means that what is the return that we get for each dollar, for example dividing cash inflow with cash outflow.
+for example if we get 1.7 dollar for each 1 dollar we should except the project.
