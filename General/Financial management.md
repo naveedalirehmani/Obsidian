@@ -12,3 +12,6 @@ IRR basically  tells us the specific value of discount rate that will make this 
 #### PI (profitability index)
 basically means that what is the return that we get for each dollar, for example dividing cash inflow with cash outflow.
 for example if we get 1.7 dollar for each 1 dollar we should except the project.
+
+#### Payback Period
+this is the break point in time at which we recover our initial investment, could be 2 years or 2 years 4 months 3 days.
