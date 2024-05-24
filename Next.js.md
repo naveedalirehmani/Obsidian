@@ -1,4 +1,4 @@
-  
+
 ### Major change
 
 - By default all pages are server side rendered and to achieve this we can just use fetch no need to export functions like serverSideGenerate just like we did in next 12. now the new things is that all pages are cached. Once a page is loaded it’s results is cached this means that going to the same page again will be like visiting a statically generated page, we can also mimic the behaviour of ISR by passing in revalidate to fetch.
@@ -59,11 +59,11 @@ href={{
 
 - Export this function from a dynamic route’s page.tsx to pre-render the dynamic routes returned for this method. Because next will know in advance what dynamic routes are going to be called.
 
-```
+```tsx
 export async function generateStaticParams() {
     const posts = ['dynamic','static']
     return posts.map((post) => ({
-      dashboardId: post,
+      [slug-name]: post,
     }))
 
 }
@@ -360,4 +360,96 @@ Folder Structure:
 ├── postcss.config.js        # PostCSS configuration
 ├── tailwind.config.js       # Tailwind CSS configuration (if used)
 └── package.json>)
+```
+
+### Axios
+
+```tsx
+// src/services/api.ts
+import axios, { AxiosInstance } from 'axios';
+
+const axiosInstance: AxiosInstance = axios.create({
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL,
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
+
+axiosInstance.interceptors.request.use((config) => {
+  // Add auth token or other headers here
+  return config;
+});
+
+axiosInstance.interceptors.response.use(
+  (response) => response,
+  (error) => Promise.reject(error)
+);
+
+export default axiosInstance;
+
+```
+
+### User api's
+
+```ts
+// src/services/userService.ts
+import axios from './api'; // Adjust the path as necessary
+import { User, UserUpdateData, AuthCredentials } from '../types/user';
+
+class UserService {
+  // Fetch user data by ID
+  static async getUserById(userId: number): Promise<User> {
+    const response = await axios.get<User>(`/users/${userId}`);
+    return response.data;
+  }
+
+  // Update user information
+  static async updateUser(userId: number, updateData: UserUpdateData): Promise<User> {
+    const response = await axios.put<User>(`/users/${userId}`, updateData);
+    return response.data;
+  }
+
+  // Authenticate user and return user data
+  static async authenticate(credentials: AuthCredentials): Promise<User> {
+    const response = await axios.post<User>('/auth/login', credentials);
+    return response.data;
+  }
+
+  // Add more user-related methods as needed, such as registration, password changes, etc.
+}
+
+export default UserService;
+
+```
+
+### Types
+
+```ts
+// types/user.ts
+export interface User {
+  id: number;
+  name: string;
+  email: string;
+  // Additional user fields
+}
+
+export interface UserUpdateData {
+  name?: string;
+  email?: string;
+  // Optional fields for updates
+}
+
+// types/apiResponses.ts
+export interface
+```
+
+# Utils
+
+```ts
+// utils/helper.ts
+export const formatDate = (dateString) => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+};
+
 ```
