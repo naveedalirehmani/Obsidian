@@ -97,3 +97,18 @@ function MyComponent() {
 }
 
 ```
+
+8. **No more memoization**
+```tsx
+const [count, setCount] = useState(0)
+
+const increment = useCallback(() => setCount((c) => c + 1), [)
+const doubleCount = useMemo(l) => count * 2, [count])
+
+return (
+<>
+<div>Count: {count)‹/div>
+<div>Double Count: {doubleCount} </div>
+<Button increment={increment} />
+</>
+```
