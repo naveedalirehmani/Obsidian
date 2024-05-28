@@ -129,3 +129,19 @@ const MyInput = forwardRef(function MyInput(props, ref) {
 2. **actions**
 3. **form actions**
 
+
+
+### useEffect execution LifeCycle 
+
+#### 2. Effect Function
+
+##### Execution Timing ( effect function )
+
+- **On Initial Render**: The effect function runs after the initial render of the component.
+- **On Dependency Change**: If the dependency array is provided, the effect function will re-run after each re-render where the dependencies have changed.
+- **On Every Render**: If no dependency array is provided, the effect function runs after every render.
+
+##### Execution Timing ( clean up Function )
+
+- **Before Re-running the Effect**: If the effect function is scheduled to re-run due to a dependency change, the cleanup function from the previous execution will run before the new effect function runs.
+- **On Component Unmount**: When the component unmounts, the cleanup function will run to clean up the side effects.
