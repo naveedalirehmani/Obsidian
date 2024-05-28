@@ -120,3 +120,7 @@ import { forwardRef} from 'react'
 const MyInput = forwardRef(function MyInput(props, ref) {
 }):
 ```
+
+11. **use**
+	1. replace useEffect and useState for api calls, this consumes a promise and you should wrap parent component in suspense for fetch state.
+	2. replace useContext to consume context.
