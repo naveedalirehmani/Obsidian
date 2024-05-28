@@ -79,7 +79,7 @@ Naveed Ali
 	1. Answer all question attached.
 	2. clarify every single request they make in the job description.
 8. Keep you responses personal, make client feel that you feel that you share the same passion.
-9. [ ] Send follow up messages to unresponsive clients.
+9. Send follow up messages to unresponsive clients.
 
 
 ---
@@ -112,29 +112,38 @@ Yes
 
 
 ```
-Ні Asif, I hope you are doing well & best of luck with your Health insurance website.
+Ні Stefania, I hope you are doing well & best of luck with your Health insurance website.
 
 I'm Naveed Ali, a full-stack developer and software engineer. 
 
-I have read your job description & I'm confident that this is an easy job as I have more than 5 years of expereince building visual appeling frontend site that are serving thousands, if not millions of users in real-time.
+I've built web and mobile applications serving thousands, if not millions of users in real-time.
 
-One such example is 
-https://gilgit.app/
-I have worked on GilgitApp for two years, contributing to its development. My role was mainly as a software engineer 
+Below are a few links for websites I have built:
 
-You can check out my portfolio for my previous work. Also Ihave a BS degree in Software Engineering & diploma from an Ivy League ( Harvard University ). 
+1 : https://gilgit.app/
+2 : https://cannect.ca/
+3 : https://www.tamilmatchmaking.com
 
-I look forward to hearing from you and thank you for your consideration! Regards Naveed Ali Rehmani Github : https://github.com/naveedalirehmani
+Client experience is my number one priority and that's reflected in the numerous five-star reviews on my profile.
+You can check out my portfolio for my previous work. 
+
+I also have a BS degree in Software Engineering & diploma from an Ivy League ( Harvard University ). 
+
+I'd love to hear about your project and, most importantly, how I can help you
+
+Regards 
+Naveed Ali Rehmani 
+Github : https://github.com/naveedalirehmani
 ```
 
 ```
-Project 1: [https://gilgit.app/](https://gilgit.app/)  
+Project 1: https://gilgit.app/
 I have worked on GilgitApp for two years, contributing to its development. My role was mainly as a software engineer
 
-Project 2: [https://cannect.ca/](https://cannect.ca/)  
-I've served as a full stack developer for Invyce software, delving deep into its coding and architecture.
+Project 2: https://cannect.ca/
+I've served as a full stack developer for cannec software, delving deep into its coding and architecture.
 
-Project 3: [https://www.tamilmatchmaking.com](https://www.tamilmatchmaking.com/)  
+Project 3: https://www.tamilmatchmaking.com
 I served as the sole developer for this project, taking responsibility for all aspects of this project such as frontend, backend, cloud engineering, and DevOps engineering.
 ```
 
@@ -146,8 +155,11 @@ https://github.com/naveedalirehmani/Microservices
 
 # LinkedIn
 
+
+```
 Hi Yagmur Allar,  
   
 I'm Naveed Ali - I wanted to connect because I'm very interested in pursuing a career at innoscripta, especially related to web development. 
 
 I'm also looking for an internship and was wondering if I could forward you my resume?  
+```
