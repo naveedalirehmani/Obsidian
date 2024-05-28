@@ -97,3 +97,51 @@ function MyComponent() {
 }
 
 ```
+
+8. **No more memoization**
+```tsx
+const [count, setCount] = useState(0)
+
+const increment = useCallback(() => setCount((c) => c + 1), [)
+const doubleCount = useMemo(l) => count * 2, [count])
+
+return (
+<>
+<div>Count: {count)‹/div>
+<div>Double Count: {doubleCount} </div>
+<Button increment={increment} />
+</>
+```
+
+10. **No more forward ref**
+```tsx
+import { forwardRef} from 'react'
+
+const MyInput = forwardRef(function MyInput(props, ref) {
+}):
+```
+
+11. **use**
+	1. replace useEffect and useState for api calls, this consumes a promise and you should wrap parent component in suspense for fetch state.
+	2. replace useContext to consume context.
+
+1. **Directives**
+2. **actions**
+3. **form actions**
+
+
+
+### useEffect execution LifeCycle 
+
+#### 2. Effect Function
+
+##### Execution Timing ( effect function )
+
+- **On Initial Render**: The effect function runs after the initial render of the component.
+- **On Dependency Change**: If the dependency array is provided, the effect function will re-run after each re-render where the dependencies have changed.
+- **On Every Render**: If no dependency array is provided, the effect function runs after every render.
+
+##### Execution Timing ( clean up Function )
+
+- **Before Re-running the Effect**: If the effect function is scheduled to re-run due to a dependency change, the cleanup function from the previous execution will run before the new effect function runs.
+- **On Component Unmount**: When the component unmounts, the cleanup function will run to clean up the side effects.
