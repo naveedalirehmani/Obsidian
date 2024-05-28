@@ -112,3 +112,11 @@ return (
 <Button increment={increment} />
 </>
 ```
+
+10. **No more forward ref**
+```tsx
+import { forwardRef} from 'react'
+
+const MyInput = forwardRef(function MyInput(props, ref) {
+}):
+```
