@@ -32,3 +32,17 @@ to group strings with versioning.
 set msg:1 somtthing nx
 ```
 will only add if msg:1 does not already exists.
+
+ **GET**
+
+```
+get msg
+``` 
+to retrieve a value
+
+##### MGET
+
+```
+mget user:1 user:2 msg:1
+```
+to retrieve multiple values in single operation.
