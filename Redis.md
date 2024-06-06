@@ -1,0 +1,14 @@
+
+### installation 
+
+```
+docker run -d --name redis-stack -p 6379:6379 -p 8001:8001 redis/redis-stack:latest
+```
+
+==once you execute this command it should run a container that exposes 2 ports 
+1. 6379 : where the redis server is running
+2. 8001 : where the redis-stack is running, you can visualise redis server on this port with browser.
+
+but here we will be using redis-insight that a tool for visualising redis server
+
+if you want to integrate this into `node.js` you can use `ioredis` for this.
