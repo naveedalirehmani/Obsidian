@@ -46,3 +46,10 @@ to retrieve a value
 mget user:1 user:2 msg:1
 ```
 to retrieve multiple values in single operation.
+
+##### MSET
+
+```
+mset msg:1 "hello" msg:2 "here"
+```
+to set multiple values in single transaction
