@@ -12,3 +12,16 @@ docker run -d --name redis-stack -p 6379:6379 -p 8001:8001 redis/redis-stack:lat
 but here we will be using redis-insight that a tool for visualising redis server
 
 if you want to integrate this into `node.js` you can use `ioredis` for this.
+
+### strings.
+a single redis string can be a maximum size of 512 mb
+##### SET
+
+```
+set name naveed
+```
+to set a string naveed in name variable
+```
+set name:1 naveed
+```
+to group strings with versioning.
