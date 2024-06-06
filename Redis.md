@@ -25,3 +25,10 @@ to set a string naveed in name variable
 set name:1 naveed
 ```
 to group strings with versioning.
+
+**SETNX**
+
+```
+set msg:1 somtthing nx
+```
+will only add if msg:1 does not already exists.
