@@ -1,4 +1,4 @@
-
+	
 save prisma
 ```
 npm install prisma --save-dev
@@ -26,7 +26,7 @@ npx prisma generate
 
 
 Prisma connects lets to create a post and than connect it to a user directly
-```
+```tsx
 const newPost = await prisma.post.create({ 
 	data: { 
 		title: 'New Post Title', 
@@ -43,8 +43,7 @@ const newPost = await prisma.post.create({
 ```
 
 create a user and associate a post with him in one query.
-```
-
+```tsx
     const newUserWithPosts = await prisma.user.create({
       data: {
         username: 'jane_doe',
