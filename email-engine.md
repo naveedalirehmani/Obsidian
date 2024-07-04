@@ -41,3 +41,9 @@
     1. **Periodic Token Check**: Optionally, checks token expiration and proactively refreshes if necessary.
     2. **Error Handling**: Implements retry mechanisms for network issues and logs errors.
 2. **User Notification**: If revalidation fails, notifies the user to re-authenticate.
+
+#### Token Revocation Handling
+
+1. **User Action**: User can manually revoke tokens via the dashboard.
+2. **Backend**: Invalidates tokens in the database and Redis, logs out the user.
+3. **Provider Notifications**: Optionally, integrates webhook for provider-initiated revocation.
