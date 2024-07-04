@@ -18,3 +18,19 @@
 5. **Database**: Stores encrypted refresh token, access token, and expiration time.
 6. **Redis**: Caches the refresh token and expiration time for quick access.
 7. **Frontend**: Stores the encrypted access token in secure, HTTP-only cookies.
+
+#### Profile Selection and Email Fetching
+
+1. **User Action**: User selects an email profile from a dropdown.
+2. **Frontend**: Retrieves the corresponding access token from cookies.
+3. **Backend**:
+    1. **Access Token Check**: Checks if the access token is expired by comparing the current time with the stored expiration time.
+    2. **Token Expired?**:
+        - **Yes**: Attempts to retrieve the refresh token from Redis.
+            1. **Redis Check**: If not found, retrieves from the database.
+            2. **Database Check**: Retrieves and updates Redis cache.
+            3. **Token Revalidation**: Uses the refresh token to obtain a new access token and expiration time.
+            4. **Access Token Update**: Updates the cookies and Redis cache with the new access token and expiration time.
+        - **No**: Proceeds with the current access token.
+    3. **Email Fetching**: Fetches emails using the valid access token.
+4. **Frontend**: Displays the fetched emails to the user.
