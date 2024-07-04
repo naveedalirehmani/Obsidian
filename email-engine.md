@@ -34,3 +34,10 @@
         - **No**: Proceeds with the current access token.
     3. **Email Fetching**: Fetches emails using the valid access token.
 4. **Frontend**: Displays the fetched emails to the user.
+
+#### Token Refresh and Error Handling
+
+1. **Backend**:
+    1. **Periodic Token Check**: Optionally, checks token expiration and proactively refreshes if necessary.
+    2. **Error Handling**: Implements retry mechanisms for network issues and logs errors.
+2. **User Notification**: If revalidation fails, notifies the user to re-authenticate.
