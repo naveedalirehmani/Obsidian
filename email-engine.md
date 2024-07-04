@@ -47,3 +47,11 @@
 1. **User Action**: User can manually revoke tokens via the dashboard.
 2. **Backend**: Invalidates tokens in the database and Redis, logs out the user.
 3. **Provider Notifications**: Optionally, integrates webhook for provider-initiated revocation.
+
+### Steps to Check Token Expiry Without API Call
+
+1. **Store Expiration Time**: When storing the access token, also store its expiration time.
+2. **Expiration Check**: Before making an API call, check the stored expiration time against the current time.
+    - If the current time is greater than or equal to the expiration time, the token is expired.
+    - If the current time is less than the expiration time, the token is still valid.
+
