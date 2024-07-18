@@ -28,7 +28,7 @@ Naveed Ali
 ```
 
 ---
-
+	
 ### Rising Talent
 
 - [x] A 100% complete profile with evidence of significant experience before joining Upwork.
@@ -112,7 +112,7 @@ Yes
 
 
 ```
-Ні Stefania, I hope you are doing well & best of luck with your Health insurance website.
+Ні Edward, I hope you are doing well & best of luck with your Health insurance website.
 
 I'm Naveed Ali, a full-stack developer and software engineer. 
 
@@ -150,16 +150,19 @@ I served as the sole developer for this project, taking responsibility for all a
 # Repo link
 
 ```
-https://github.com/naveedalirehmani/Microservices
+https://github.com/naveedalirehmani/email-engine
 ```
 
 # LinkedIn
 
 
 ```
-Hi Yagmur Allar,  
+Hi Masoumeh,  
   
-I'm Naveed Ali - I wanted to connect because I'm very interested in pursuing a career at innoscripta, especially related to web development. 
+I'm Naveed Ali - I wanted to connect because I'm very interested in pursuing a career at lookinsure, especially related to web development. 
 
 I'm also looking for an internship and was wondering if I could forward you my resume?  
 ```
+
+
+

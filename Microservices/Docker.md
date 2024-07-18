@@ -60,7 +60,7 @@ there are the three channels that linux attaches to every process, stdin allows 
 
 9. **docker-compose up**: Start containers defined in a `docker-compose.yml` file.
 10. **docker-compose down**: Stop and remove containers defined in a `docker-compose.yml` file.
-11. **docker inspect [object]**: Display detailed information about a Docker object (container, image, etc.).
+11. **docker inspect [object]**: Display detailed information about a Docker object (container, image, etc).
 12. **docker version**: Show Docker version information.
 13. **docker info**: Display system-wide Docker information.
 14. **docker login**: Log in to a Docker registry.
@@ -68,7 +68,7 @@ there are the three channels that linux attaches to every process, stdin allows 
 
 ### networks
 
-1. **docker network inspect**
+1. **docker inspect bridge**
 2. **docker network ls**
 3. **docker network create -d bridge youtube**
 4. **docker run -it --network=youtube --name tony_stark ubunto**
@@ -83,6 +83,15 @@ there are the three channels that linux attaches to every process, stdin allows 
 -e VAR2=value2 \
 --name container-name \
 image-name
+
+You can do `docker inspect bridge` to see all the containers connected to this network by default all containers are connected to bridge network on the host computer & that's how the talk to the internet.
+here you can also see the ip address each container in the network is assigned, or do hostname -i in the running process.
+
+you can do `docker network create work` to create a network, by default it create a bridge
+
+`docker network connect work server1` to manually add a container to a network, a container can be connected to multiple networks at a single time, it will have multiple ipv4 address for this.
+
+
 
 ---
 
