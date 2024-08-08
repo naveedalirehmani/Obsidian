@@ -102,8 +102,8 @@ function MyComponent() {
 ```tsx
 const [count, setCount] = useState(0)
 
-const increment = useCallback(() => setCount((c) => c + 1), [)
-const doubleCount = useMemo(l) => count * 2, [count])
+const increment = useCallback(() => setCount((c) => c + 1), [])
+const doubleCount = useMemo((l) => count * 2, [count])
 
 return (
 <>

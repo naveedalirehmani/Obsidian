@@ -250,6 +250,56 @@ return (
 
 ---
 
+### Server Component Caching. ( app router )
+
+Next.js extends the default fetch api and add extra features on top of it. By default all network requests made are cached and all subsequent requests are returned from cached store ( you can find this in the `.next/cache` folder ).
+
+if you pass `cache: "no-store"` if will not cache the fetch request & refetch on all subsequent requests.
+
+if there are 2 api calls and 1 is default and 1 is `no-store` it will cache first & not cache second on and only if the first request is above the second network call in the code, if the first request with default cache before is placed below the second network request that has `cache: "no-store"` the first request will also not be cached.
+but if you have a route segment configurations ( explained below ) this behaviour is not observed.
+
+##### Opting Out Of Caching
+
+1. For individual data fetches, you can opt out of caching by setting the cache option to no-store
+2. Once you specify the no-store option for a fetch request, subsequent fetch requests will also not be cached
+3. By default, Next.js will cache fetch requests that occur before any dynamic functions (cookies), headers), searchParams) are used and will not cache requests found after dynamic functions
+
+you can also do 
+```tsx
+export const fetchCache = "default-cache";
+```
+
+#### Revalidation
+You can also set a expiry on the cache data. pass below option to fetch request.
+```tsx
+{
+	next: {
+		revalidate : 10
+	}
+}
+```
+
+##### Revalidation
+
+1. You can set the revalidate route segment configuration to establish the default revalidation time for a layout or page: export const revalidate = 10;
+2. Regarding the revalidation frequency, the lowest revalidate time across each layout and page of a single route will determine the revalidation frequency of the entire route
+3. if you set a route level revalidation time, it will not overwrite the individual configurations on fetch.
+
+
+#### Memoization
+
+1. lets suppose you have the same fetch request in the layout and the child component, the layouts makes the request to the endpoint and caches it, this means that when the child component mounts it gets the value from cache.
+2. this happens for get requests
+3. only happens in pages not in api routes.
+
+
+### Client component caching ( app router )
+
+If you want the caching behaviour explained above for the server components in the client components, you can use a library like a tanstack query for this.
+
+
+---
 ### Next.js Api
 
 #### Request.

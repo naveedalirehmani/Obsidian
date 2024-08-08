@@ -226,3 +226,87 @@ npx webpack --config webpack.config.js
 41. NC Job Network - [https://lnkd.in/gTP6X3fU](https://lnkd.in/gTP6X3fU)  
 42. Idealist - [https://lnkd.in/gZ5VciRN](https://lnkd.in/gZ5VciRN) (signedup)
     
+
+```
+🏆 Top-Notch ​Full-Stack Developer 
+
+Hello, I'm Naveed Ali! My journey as a seasoned full-stack developer in the world of development and software engineering spans over 5 fruitful years. I bring a wealth of experience and a fresh perspective to the platform, specializing in creating visually stunning and intuitive digital experiences.
+
+Why Choose Me?
+👉 5+ Years of Professional Experience in full-stack developer
+👉Expert in React.js, Next.js, Svelte, Nuxt, Gatsby for seamless UIs.
+👉 Proficient in backend technologies: Node.js, Express, and GraphQL.
+👉 Experienced in both NoSQL (MongoDB) and SQL (MySQL) databases.
+👉 Agile & QA expert for scalable project management.
+
+What Sets Me Apart:
+✔️ Client experience is my number one priority 
+✔️ Up-to-date with the Latest Trends in Web development
+✔️ Proven Track Record of Client Satisfaction (Check My Reviews!).
+✔️ Collaborative Approach, Adapting to Your Specific Needs.
+✔️ Full-stack developer with cloud and DevOps skills, from concept to deployment.
+✔️ Built scalable web and mobile apps for thousands to millions of users.
+
+📞 Get in Touch:
+I'm here to provide you with a seamless, enjoyable . If you have any questions or want to discuss your project in more detail, feel free to reach out. I'm available for a chat and typically respond within a few hours.
+
+Keywords you can find me: 
+Next.js, GraphQL, Redux, Firebase, Supabase, React Hook Forms, TypeScript, Tailwind CSS, Storybook, Atomic Design, Formik, MUI, RESTful API, SWR, SSR, SSG, Migration, Redux Framework, WooCommerce, WooCommerce Stripe Payments Gateway, JavaScript Plugin, Canvas animation, Webpack, npm, yarn, Bug Fixing, Quick Fixes, PSD to HTML, Figma to HTML, Coming Soon Page Development, Landing Page Development, Bespoke WordPress Theme Development, E-commerce Development, WooCommerce Development, Page Speed Optimization, Website Hardening.
+```
+
+
+
+  
+At Nothnine, our team has built web and mobile applications that serve thousands, if not millions, of users in real-time. As a team of versatile Engineers, we handle everything from frontend to backend, including cloud engineering and DevOps. We take pride in our ability to manage entire projects seamlessly, ensuring robust, scalable, and efficient solutions for our trusted clients. 
+
+We'd love to hear about your project and discuss how we can help you! Book a consultation today to see if we're the perfect fit for your needs.
+
+
+
+
+1. home page
+	1. signin in
+	2. sign up ( buyer, seller ) usertype: buyer | seller
+2. dashboard
+	1. seller
+		1. add event property /seller
+	2. buyer
+		1. property listing /buyer
+			1. filtering.
+
+
+I want to create a web application that manages users all email providers at one place, users can add their multiple profile such as gmail, another gmail profile, outlook etc.
+they can see, send and reply to their mails in this one application for all profile. 
+they can switch between profile on our application and manage mails for multiple providers like this.
+I have already created a system where user oAuth's with his outlook account and their mails are listed, they can reply and compose mails.
+but their are few problems.
+1. I am not sure if this accesstoken that I'm getting when user authenticates with oAuth can be forever used for fetching mail data on user behave or it expires after a while. if it expires then we would have to ask user for re oAuth with each provider which is not a good scenerio.
+2. I need you to suggest a system design for above, like the data flow of it. I'm fullstack and work with javascript next.js and node.js
+
+
+
+
+
+Dear Northnine Team,
+
+I loved working with you each day and I truly appreciate the time I spent at Northnine. I'm glad I had the opportunity to work with such great minds. Thank you all for the wonderful experience.
+
+Best wishes,  
+Naveed Ali Rehmani.
+
+
+I'm creating a one in all mail provider web application. 
+1. user creates a profile & sign in to their desired email provider ( gmail, outlook ) or even multiple gmail or outlook profiles in settings tab.
+2. we fetch their access and refresh token by oAuth.
+3. save this refresh token in database & redis related to their profile.
+4. save the access token in user cookies. ( could be multiple for multiple providers )
+5. user can select a profile from fronted by just a dropdown select.
+6. lets say user selects that 1 gmail profile naveed123@gmail.com in this case as example
+7. we try to fetch mails for this profile
+	1. we try retrieve this access token for his specific profile which we set in signup cookies.
+	2. we try to fetch mails by access token
+	3. if expired we try to fetch refresh from redis cache
+	4. if also does not exists there we fetch from database.
+	5. revalited the access token with refresh token.
+	6. reset user cookies with new access token.
+
