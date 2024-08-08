@@ -250,6 +250,15 @@ return (
 
 ---
 
+### Server Component Caching. ( app router )
+
+Next.js extends the default fetch api and add extra features on top of it. By default all network requests made are cached and all subsequent requests are returned from cached store ( you can find this in the `.next/cache` folder ).
+
+if you pass `cache: "no-store"` if will not cache the fetch request & refetch on all subsequent requests.
+
+if there are 2 api calls and 1 is default and 1 is `no-store` it will cache first & not cache second on and only if the first request is above the second network call in the code, if the first request with default cache before is placed below the second network request that has `cache: "no-store"` the first request will also not be cached.
+but if you have a route segment configurations ( explained below ) this behaviour is not observed.
+
 ### Next.js Api
 
 #### Request.
