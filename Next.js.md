@@ -270,6 +270,16 @@ you can also do
 export const fetchCache = "default-cache";
 ```
 
+#### Revalidation
+You can also set a expiry on the cache data. pass below option to fetch request.
+```tsx
+{
+	next: {
+		revalidate : 10
+	}
+}
+```
+
 ### Next.js Api
 
 #### Request.
