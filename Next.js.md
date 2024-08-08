@@ -259,6 +259,17 @@ if you pass `cache: "no-store"` if will not cache the fetch request & refetch on
 if there are 2 api calls and 1 is default and 1 is `no-store` it will cache first & not cache second on and only if the first request is above the second network call in the code, if the first request with default cache before is placed below the second network request that has `cache: "no-store"` the first request will also not be cached.
 but if you have a route segment configurations ( explained below ) this behaviour is not observed.
 
+##### Opting Out Of Caching
+
+1. For individual data fetches, you can opt out of caching by setting the cache option to no-store
+2. Once you specify the no-store option for a fetch request, subsequent fetch requests will also not be cached
+3. By default, Next.js will cache fetch requests that occur before any dynamic functions (cookies), headers), searchParams) are used and will not cache requests found after dynamic functions
+
+you can also do 
+```tsx
+export const fetchCache = "default-cache";
+```
+
 ### Next.js Api
 
 #### Request.
