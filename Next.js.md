@@ -293,6 +293,13 @@ You can also set a expiry on the cache data. pass below option to fetch request.
 2. this happens for get requests
 3. only happens in pages not in api routes.
 
+
+### Client component caching ( app router )
+
+If you want the caching behaviour explained above for the server components in the client components, you can use a library like a tanstack query for this.
+
+
+---
 ### Next.js Api
 
 #### Request.
