@@ -13,3 +13,10 @@ emulator -avd my_emulator
 - [x] create an emulator
 - [x] run hello world with emulator.
 
+
+---
+
+# Dart 
+
+- [x] Install dart.
+- [x] Run with dart.
