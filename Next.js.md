@@ -287,6 +287,12 @@ You can also set a expiry on the cache data. pass below option to fetch request.
 3. if you set a route level revalidation time, it will not overwrite the individual configurations on fetch.
 
 
+#### Memoization
+
+1. lets suppose you have the same fetch request in the layout and the child component, the layouts makes the request to the endpoint and caches it, this means that when the child component mounts it gets the value from cache.
+2. this happens for get requests
+3. only happens in pages not in api routes.
+
 ### Next.js Api
 
 #### Request.
