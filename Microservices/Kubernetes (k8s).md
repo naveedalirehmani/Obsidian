@@ -1,7 +1,11 @@
 
+
+
 ## Getting started with Kubernetes.
 #### Introduction
 Kubernetes is a container manager that helps us create, manage & monitor docker containers with ease. It's an open-source system that automates deploying, scaling, and managing containerized applications.
+
+Kubernetes is a container orchestrator (like [ECS](https://newsletter.simpleaws.dev/p/simple-aws-4-ecs)), which means you define your services and the resources they need, and it will manage deploying them, scaling them, communication (networking, security) and management (logging, monitoring, etc). You focus on writing the code for your services, Kubernetes handles the ops side of things.
 
 #### key components
 
@@ -24,11 +28,11 @@ Kubernetes is a container manager that helps us create, manage & monitor docker 
 7. **kubectl describe pod [pod-name]** : will list information to a specific pod.
 
 ##### Working with Deployment
-1. **kubectl get deployments** : list running pods
+1. **kubectl get deployments** : list running deployments
 2. **kubectl apply -f [route-to-the-config-file]** : this will process the config file.
-3. **kubectl logs [deployment-name]** : list the logs to a running pod.
-4. **kubectl delete [deployment-name]** : delete a pod.
-5. **kubectl describe deployment [deployment-name]** : will list information to a specific pod.
+3. **kubectl logs [deployment-name]** : list the logs to a running deployment.
+4. **kubectl delete deployment [deployment-name]** : delete a deployment.
+5. **kubectl describe deployment [deployment-name]** : will list information to a specific deployment.
 6. __kubectl rollout restart deployment__ [deployment-name] : restart a running deployment.
 
 #### Types of services.
@@ -38,3 +42,44 @@ Kubernetes is a container manager that helps us create, manage & monitor docker 
 3. __Load Balancer__ : Makes a port accessible from outside of a cluster. Recommended way!
 4. __External Name__ : Don't know.
    
+---
+
+# [kubernetes-dashboard](http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy)
+
+---
+
+### ingress-nginx 
+
+#### Why Do We Need `ingress-nginx`?
+
+**HTTP and HTTPS Routing**:
+`ingress-nginx` allows you to define rules for routing external HTTP and HTTPS traffic to services within your Kubernetes cluster. This makes it easier to expose your services to the outside world.
+    
+**Consolidated Entry Point**:
+Instead of exposing each service with its own IP address or port, you can use an Ingress to manage multiple services under a single IP address and handle the routing based on hostnames or URL paths.
+    
+**Load Balancing**:
+The Ingress controller can distribute incoming traffic across multiple instances of your services, ensuring better utilization and availability.
+    
+**SSL Termination**:
+`ingress-nginx` can handle SSL termination, which means it can manage your SSL/TLS certificates and decrypt HTTPS traffic before forwarding it to your services. This simplifies the management of SSL certificates.
+    
+**Advanced Routing**:
+`ingress-nginx` supports advanced routing features like URL rewrites, redirects, and traffic splitting, giving you fine-grained control over how traffic is handled.
+
+### installation 
+
+**install glasskube.**
+```
+brew install glasskube/tap/glasskube
+```
+
+**install ingress-nginx with glasskube**
+make sure that kubernetes cluster is running.
+```
+glasskube install ingress-nginx
+```
+
+
+
+# ekctl 
