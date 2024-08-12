@@ -129,17 +129,6 @@ sudo certbot --nginx
 
 ---
 
-### Personal.
-[signin](https://861421557251.signin.aws.amazon.com/console)
-```
-admin
-```
-
-```
-7@(ciT6]
-```
-
-
 ---
 
 ### IAM & Root
@@ -151,7 +140,11 @@ admin
 - you don't need to attach permission for each user directly, you can create a user-group and add policies to it & later add users to this user-group. also you can only attach 10 policies to user so there is a limit as well but this limit is not on user-groups.
 - you can also create custom policies.
 - in each template there are multiple objects of policies, each has effect, action & resource. which means if this policy active? what actions are allowed? such as reading or writing & on what resources? such as all s3 buckets or a 1 specific bucket.
-
+- every action is implicitly denied unless it's allowed in the policy. so the action check goes something like this ( deny, allow, deny )
+- Each policy has three sections :  action, resource & condition.
+- A service it self does not need roles to perform actions, but if a code is running on a ec2 that is acting as a principal we need roles for it.
+- Exactly! IAM Users are typically used for real persons who need access to AWS resources. They can authenticate using a password for console access or use access keys (access key ID and secret access key) for programmatic access through APIs or SDKs. On the other hand, IAM Roles are not associated with specific persons but are instead attached to AWS services (like EC2 instances, Lambda functions) or AWS resources. Roles define a set of permissions and policies that specify what actions can be taken and which AWS resources can be accessed. When an IAM Role is attached to an EC2 instance, for example, the instance can then make API requests to other AWS services, like S3, without needing to explicitly provide access keys. Instead, AWS automatically provides temporary security credentials to the instance, managed through AWS STS (Security Token Service).
+- 
 ### serverless vs serverfull
 
 - in server full we are responsible for allocating resources to a server and we are rented for it.
