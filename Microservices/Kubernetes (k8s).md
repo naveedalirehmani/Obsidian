@@ -66,3 +66,20 @@ The Ingress controller can distribute incoming traffic across multiple instances
     
 **Advanced Routing**:
 `ingress-nginx` supports advanced routing features like URL rewrites, redirects, and traffic splitting, giving you fine-grained control over how traffic is handled.
+
+### installation 
+
+**install glasskube.**
+```
+brew install glasskube/tap/glasskube
+```
+
+**install ingress-nginx with glasskube**
+make sure that kubernetes cluster is running.
+```
+glasskube install ingress-nginx
+```
+
+
+
+# ekctl 
