@@ -56,6 +56,3 @@ this is working but there is a better way of doing this with third party librari
 
 }
 ```
-
-- **How to deploy such apps that are mentioned above, Deployment.**
-- build the react app and then copy the build folder to node.js server where our build files will live in public folder and then using express middleware app.use(express.static(path.join(_dirname,’public’)) we can server them publicly, so that we don’t have to deploy both server on different plate forms such as node.js on heruko and react on netlify.  to avoid copy pasting build files manualy use **_"build": "BUILD_PATH=../server/public react-scripts build",_**   in react package.json file.
