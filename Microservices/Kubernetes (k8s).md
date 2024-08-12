@@ -42,3 +42,27 @@ Kubernetes is a container orchestrator (like [ECS](https://newsletter.simpleaws
 3. __Load Balancer__ : Makes a port accessible from outside of a cluster. Recommended way!
 4. __External Name__ : Don't know.
    
+---
+
+# [kubernetes-dashboard](http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy)
+
+---
+
+### ingress-nginx 
+
+#### Why Do We Need `ingress-nginx`?
+
+**HTTP and HTTPS Routing**:
+`ingress-nginx` allows you to define rules for routing external HTTP and HTTPS traffic to services within your Kubernetes cluster. This makes it easier to expose your services to the outside world.
+    
+**Consolidated Entry Point**:
+Instead of exposing each service with its own IP address or port, you can use an Ingress to manage multiple services under a single IP address and handle the routing based on hostnames or URL paths.
+    
+**Load Balancing**:
+The Ingress controller can distribute incoming traffic across multiple instances of your services, ensuring better utilization and availability.
+    
+**SSL Termination**:
+`ingress-nginx` can handle SSL termination, which means it can manage your SSL/TLS certificates and decrypt HTTPS traffic before forwarding it to your services. This simplifies the management of SSL certificates.
+    
+**Advanced Routing**:
+`ingress-nginx` supports advanced routing features like URL rewrites, redirects, and traffic splitting, giving you fine-grained control over how traffic is handled.
