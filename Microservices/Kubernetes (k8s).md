@@ -1,7 +1,11 @@
 
+
+
 ## Getting started with Kubernetes.
 #### Introduction
 Kubernetes is a container manager that helps us create, manage & monitor docker containers with ease. It's an open-source system that automates deploying, scaling, and managing containerized applications.
+
+Kubernetes is a container orchestrator (like [ECS](https://newsletter.simpleaws.dev/p/simple-aws-4-ecs)), which means you define your services and the resources they need, and it will manage deploying them, scaling them, communication (networking, security) and management (logging, monitoring, etc). You focus on writing the code for your services, Kubernetes handles the ops side of things.
 
 #### key components
 
@@ -24,11 +28,11 @@ Kubernetes is a container manager that helps us create, manage & monitor docker 
 7. **kubectl describe pod [pod-name]** : will list information to a specific pod.
 
 ##### Working with Deployment
-1. **kubectl get deployments** : list running pods
+1. **kubectl get deployments** : list running deployments
 2. **kubectl apply -f [route-to-the-config-file]** : this will process the config file.
-3. **kubectl logs [deployment-name]** : list the logs to a running pod.
-4. **kubectl delete [deployment-name]** : delete a pod.
-5. **kubectl describe deployment [deployment-name]** : will list information to a specific pod.
+3. **kubectl logs [deployment-name]** : list the logs to a running deployment.
+4. **kubectl delete deployment [deployment-name]** : delete a deployment.
+5. **kubectl describe deployment [deployment-name]** : will list information to a specific deployment.
 6. __kubectl rollout restart deployment__ [deployment-name] : restart a running deployment.
 
 #### Types of services.
