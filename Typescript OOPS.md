@@ -55,3 +55,41 @@ myDog.makeSound();      // Output: Rex makes a sound
 myDog.displayBreed();   // Output: Rex is a German Shepherd
 
 ```
+
+### 4. Access Modifiers
+
+TypeScript provides three access modifiers: `public`, `private`, and `protected`.
+
+- `public`: Default modifier. Accessible from anywhere.
+- `private`: Accessible only within the class it is defined.
+- `protected`: Accessible within the class and subclasses.
+
+Example:
+
+```ts
+class Animal {
+    protected name: string;
+
+    constructor(name: string) {
+        this.name = name;
+    }
+
+    makeSound(): void {
+        console.log(`${this.name} makes a sound`);
+    }
+}
+
+class Dog extends Animal {
+    private breed: string;
+
+    constructor(name: string, breed: string) {
+        super(name);
+        this.breed = breed;
+    }
+
+    displayBreed(): void {
+        console.log(`${this.name} is a ${this.breed}`);
+    }
+}
+
+```
