@@ -93,3 +93,36 @@ class Dog extends Animal {
 }
 
 ```
+
+In this example, `name` is protected, so it can be accessed in the `Dog` class but not outside it. `breed` is private, so it can only be accessed within the `Dog` class.
+
+### 5. Abstract Classes
+
+An abstract class is a class that cannot be instantiated and is typically used as a base class. It can contain abstract methods that must be implemented by derived classes:
+
+```ts
+abstract class Animal {
+    protected name: string;
+
+    constructor(name: string) {
+        this.name = name;
+    }
+
+    abstract makeSound(): void;  // Abstract method
+
+    move(): void {
+        console.log(`${this.name} is moving`);
+    }
+}
+
+class Dog extends Animal {
+    makeSound(): void {
+        console.log(`${this.name} barks`);
+    }
+}
+
+const myDog = new Dog('Rex');
+myDog.makeSound();  // Output: Rex barks
+myDog.move();       // Output: Rex is moving
+
+```
