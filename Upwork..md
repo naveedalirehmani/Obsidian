@@ -1,6 +1,15 @@
+	
+| Context   | Date/time       | Client           |     |
+| --------- | --------------- | ---------------- | --- |
+| Interview | 1:30 AM, Monday | AlloPlan, Upwork |     |
+|           |                 |                  |     |
 
+---
 
 [upwork filter](https://www.upwork.com/nx/search/jobs/?contractor_tier=3&payment_verified=1&proposals=0-4,5-9&q=node.js%20AND%20%28node.js%20OR%20express%20OR%20graphql%20OR%20backend%20OR%20fastify%20OR%20database%20OR%20rest%20OR%20api%29%20AND%20NOT%20%28php%20OR%20laravel%20OR%20python%20OR%20solidity%29&sort=recency)
+
+
+---
 
 # Proposals.
 
@@ -112,7 +121,7 @@ Yes
 
 
 ```
-Ні Edward, I hope you are doing well & best of luck with your Health insurance website.
+Hello Oren, I hope you are doing well & best of luck with your Health insurance website.
 
 I'm Naveed Ali, a full-stack developer and software engineer. 
 
@@ -122,7 +131,7 @@ Below are a few links for websites I have built:
 
 1 : https://gilgit.app/
 2 : https://cannect.ca/
-3 : https://www.tamilmatchmaking.com
+3 : https://www.flower.box/
 
 Client experience is my number one priority and that's reflected in the numerous five-star reviews on my profile.
 You can check out my portfolio for my previous work. 
@@ -157,12 +166,29 @@ https://github.com/naveedalirehmani/email-engine
 
 
 ```
-Hi Masoumeh,  
+Hi Natalia,  
   
-I'm Naveed Ali - I wanted to connect because I'm very interested in pursuing a career at lookinsure, especially related to web development. 
+I'm Naveed Ali - I wanted to connect because I'm very interested in pursuing a career at vFairs, especially related to web development. 
 
 I'm also looking for an internship and was wondering if I could forward you my resume?  
 ```
 
 
+```
+Hi Adam,  
+  
+I wanted to connect because I'm very interested in pursuing a career at Adecco.
 
+I'm also looking for an internship and was wondering if I could forward you my resume? 
+```
+
+---
+
+# 39866
+
+---
+
+
+Understand → Observe → Define → Ideate → Prototype → Test = 💎 Double Diamond Design Model
+
+With proven experience in the field, I am confident that if selected, I can bring my skills to the new position and contribute significantly to the success of the project.
