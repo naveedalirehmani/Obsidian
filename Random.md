@@ -182,6 +182,7 @@ npx babel src/index.js --out-file dist/index.js
 npx webpack --config webpack.config.js
 ```
 
+---
   
 1. Simply Hired - [https://lnkd.in/gBad2mXx](https://lnkd.in/gBad2mXx)  
 2. Upstart - [https://lnkd.in/g3sXD8DZ](https://lnkd.in/g3sXD8DZ)  
@@ -221,8 +222,6 @@ npx webpack --config webpack.config.js
 36. Quest Software - [https://lnkd.in/gqaB5RTN](https://lnkd.in/gqaB5RTN)  
 37. Remote - [https://lnkd.in/gFADxNnZ](https://lnkd.in/gFADxNnZ)  
 38. Sentilink - [https://lnkd.in/g7uJTCcj](https://lnkd.in/g7uJTCcj)  
-39. Suzy - [https://suzy.com/](https://suzy.com/)  
-40. NC Works - [https://lnkd.in/gZptQGFM](https://lnkd.in/gZptQGFM)  
 41. NC Job Network - [https://lnkd.in/gTP6X3fU](https://lnkd.in/gTP6X3fU)  
 42. Idealist - [https://lnkd.in/gZ5VciRN](https://lnkd.in/gZ5VciRN) (signedup)
     
@@ -255,45 +254,7 @@ Next.js, GraphQL, Redux, Firebase, Supabase, React Hook Forms, TypeScript, Tailw
 ```
 
 
-
-  
-At Nothnine, our team has built web and mobile applications that serve thousands, if not millions, of users in real-time. As a team of versatile Engineers, we handle everything from frontend to backend, including cloud engineering and DevOps. We take pride in our ability to manage entire projects seamlessly, ensuring robust, scalable, and efficient solutions for our trusted clients. 
-
-We'd love to hear about your project and discuss how we can help you! Book a consultation today to see if we're the perfect fit for your needs.
-
-
-
-
-1. home page
-	1. signin in
-	2. sign up ( buyer, seller ) usertype: buyer | seller
-2. dashboard
-	1. seller
-		1. add event property /seller
-	2. buyer
-		1. property listing /buyer
-			1. filtering.
-
-
-I want to create a web application that manages users all email providers at one place, users can add their multiple profile such as gmail, another gmail profile, outlook etc.
-they can see, send and reply to their mails in this one application for all profile. 
-they can switch between profile on our application and manage mails for multiple providers like this.
-I have already created a system where user oAuth's with his outlook account and their mails are listed, they can reply and compose mails.
-but their are few problems.
-1. I am not sure if this accesstoken that I'm getting when user authenticates with oAuth can be forever used for fetching mail data on user behave or it expires after a while. if it expires then we would have to ask user for re oAuth with each provider which is not a good scenerio.
-2. I need you to suggest a system design for above, like the data flow of it. I'm fullstack and work with javascript next.js and node.js
-
-
-
-
-
-Dear Northnine Team,
-
-I loved working with you each day and I truly appreciate the time I spent at Northnine. I'm glad I had the opportunity to work with such great minds. Thank you all for the wonderful experience.
-
-Best wishes,  
-Naveed Ali Rehmani.
-
+---
 
 I'm creating a one in all mail provider web application. 
 1. user creates a profile & sign in to their desired email provider ( gmail, outlook ) or even multiple gmail or outlook profiles in settings tab.
@@ -310,3 +271,16 @@ I'm creating a one in all mail provider web application.
 	5. revalited the access token with refresh token.
 	6. reset user cookies with new access token.
 
+
+---
+
+https://www.youtube.com/shorts/u2AbVQNba30
+
+
+---
+
+
+
+1. mongodb atlas 500mb free. ( for mongodb )
+2. Netlify or Vercel ( free but will charge alot more than aws once we start receiving good traffic also provides a CICD by default ) 
+3. Render for Node.js ( free upto 750 instance hours monthly ) 
