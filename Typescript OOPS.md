@@ -42,3 +42,16 @@ class Dog extends Animal {
 }
 
 ```
+
+### 3. Using the Extended Class
+
+You can create instances of the `Dog` class and use its methods:
+
+```ts
+const myDog = new Dog('Rex', 'German Shepherd');
+
+myDog.makeSound();      // Output: Rex makes a sound
+                        //         Rex barks
+myDog.displayBreed();   // Output: Rex is a German Shepherd
+
+```
