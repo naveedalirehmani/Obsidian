@@ -73,3 +73,31 @@ keys will be delete after a set time period
 EXPIRE key seconds
 ```
 
+### List
+list is basically an array & it can be used as a stack or a queue depends on the implementation.
+
+```
+lpush messages hey
+```
+similar to unshift in javascript, here messages is the name of the list.
+```
+rpush message bye
+```
+similar to push in javascript
+```
+lpop messages
+```
+similar to shift 
+```
+rpop message
+```
+similar to pop 
+```
+blpop message 20
+```
+similar to `lpop` but it's block, this mean that it'll wait for an element to be populated if it doesn't exist, or a specified time period.
+```
+lrange message 0 -1
+```
+get all messages
+
