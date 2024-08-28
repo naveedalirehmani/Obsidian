@@ -66,3 +66,10 @@ incrby count 10
 ```
 should return 11
 
+### Expiry 
+keys will be delete after a set time period
+
+```
+EXPIRE key seconds
+```
+
