@@ -53,3 +53,16 @@ to retrieve multiple values in single operation.
 mset msg:1 "hello" msg:2 "here"
 ```
 to set multiple values in single transaction
+
+### Integers
+
+```
+set count 0
+incr count
+```
+should return 1
+```
+incrby count 10
+```
+should return 11
+
