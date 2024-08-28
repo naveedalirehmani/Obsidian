@@ -101,3 +101,11 @@ lrange message 0 -1
 ```
 get all messages
 
+
+### get by pattren 
+```
+KEYS msg:*
+```
+get all message that match the above pattern, here * is placholder for all values.
+
+
