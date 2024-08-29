@@ -284,3 +284,8 @@ https://www.youtube.com/shorts/u2AbVQNba30
 1. mongodb atlas 500mb free. ( for mongodb )
 2. Netlify or Vercel ( free but will charge alot more than aws once we start receiving good traffic also provides a CICD by default ) 
 3. Render for Node.js ( free upto 750 instance hours monthly ) 
+
+
+
+I've a microservice running on aws eks. the tech stack is docker, kubernetes, ingress-nginx.
+I hosted this with eksctl
