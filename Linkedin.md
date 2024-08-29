@@ -33,3 +33,39 @@ I wanted to connect because I'm very interested in pursuing a career at Adecco.
 I'm also looking for an internship and was wondering if I could forward you my resume? 
 ```
 
+
+
+Stay patient and think about how far you've come. Use the challenges as a chance to understand yourself better. Talk to mentors and peers, as their advice can guide you. Focus on learning new skills and improving yourself. 
+Also remember that connections can lead to new opportunities, so please network with others.
+
+
+
+From personal experience.
+
+1. Understand their contribution, and appreciate their time ~ Get involved
+2. Instead of listening to respond, Listening to understand ~ True leaders lean into constructive feedback.
+3. They put people first: Prioritizing the well-being and needs of their team ~ Put People First.
+4. trust your team to get their best work done, and support them if and when they need you ~ Avoid Micromanaging.
+
+
+
+
+By being transparent about challenges and how you overcome them, you build trust and show your dedication & passion for what you do, those who have failed do tend to be strong & compassionate.
+
+
+```
+https://www.linkedin.com/in/naveedalirehmani/
+```
+
+
+```
+
+
+
+# Pro tips
+
+1. You can text up to 3 degree connections if you guys are in the same group
+2. there is a option in the about section for each company page, where you can select I'm interest to work here. this notifies the recruiters of the company about your interest in working there.
+3. Apply for skill assessment on your endorsement to rank higher in that domain.
+4. add your resume in the features tabs.
+
