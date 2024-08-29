@@ -14,3 +14,22 @@ maybe if you are a web developer you can start by hosting you very own full stac
 
 Microservices offer many benefits, such as the ability to scale parts of the system independently, use different technologies for different services, and improve system reliability since one service failure won’t crash the whole system. They also enable faster development and deployment, easier maintenance. works best with agile!
 
+
+
+```
+Hi Tayyaba,  
+  
+I'm Naveed Ali - I wanted to connect because I'm very interested in pursuing a career at Abendsoft, especially related to web development. 
+
+I'm also looking for an internship and was wondering if I could forward you my resume?  
+```
+
+
+```
+Hi Adam,  
+  
+I wanted to connect because I'm very interested in pursuing a career at Adecco.
+
+I'm also looking for an internship and was wondering if I could forward you my resume? 
+```
+
