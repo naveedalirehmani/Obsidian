@@ -129,3 +129,8 @@ sinter <set-name> <set-2-name>
 ```
 to check for intersections between 2 sets, returns similar values in 2 sets.
 
+
+#### need to study redis pub sub, this is used to publish and subscribe to events in redis.
+( this makes very easy for us to scale web sockets in a micro-services architecture ) 
+
+
