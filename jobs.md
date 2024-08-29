@@ -30,3 +30,10 @@ I also have a Bachelors in Software Engineering & diploma from an Ivy League ( H
 https://github.com/naveedalirehmani
 ```
 
+
+
+I am writing to express my interest in the Senior Backend Engineer position currently available at [Company Name]. With my extensive experience in backend development, I am confident in my ability to contribute effectively to your team.
+
+Please find my resume attached for your consideration. I look forward to the opportunity to discuss how my skills and experiences align with the needs of your team.
+
+Thank you for your time and consideration. I look forward to hearing from you.
