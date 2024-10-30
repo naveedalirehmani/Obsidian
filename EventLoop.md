@@ -24,3 +24,12 @@
 6. **Iteration Continues**:
     
     - This process of checking the next tick queue, microtask queue, and task queue continues on each event loop tick, handling tasks as they appear and looping until the event loop has no more work to do.
+
+### Summary Flow of Each Event Loop Iteration:
+
+1. Execute **synchronous code** on the call stack.
+2. Execute all callbacks in the **next tick queue** (`process.nextTick`).
+3. Execute all callbacks in the **microtask queue** (e.g., `Promise` callbacks, `queueMicrotask`).
+4. Execute one **task from the task queue** (e.g., `setTimeout`, `setImmediate`, I/O events).
+5. **Re-check the next tick queue** and **microtask queue**.
+6. Repeat steps 4–5 until the task queue, next tick queue, and microtask queue are empty.
