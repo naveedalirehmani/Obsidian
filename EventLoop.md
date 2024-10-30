@@ -33,3 +33,40 @@
 4. Execute one **task from the task queue** (e.g., `setTimeout`, `setImmediate`, I/O events).
 5. **Re-check the next tick queue** and **microtask queue**.
 6. Repeat steps 4–5 until the task queue, next tick queue, and microtask queue are empty.
+
+### Example to Illustrate the Flow
+
+```js
+console.log('Start');
+
+setTimeout(() => {
+    console.log('setTimeout');
+}, 0);
+
+process.nextTick(() => {
+    console.log('process.nextTick');
+});
+
+Promise.resolve().then(() => {
+    console.log('Promise');
+});
+
+console.log('End');
+```
+
+**Expected Output**:
+
+```
+Start
+End
+process.nextTick
+Promise
+setTimeout
+```
+
+**Explanation**:
+
+1. **Synchronous code** executes first, logging `'Start'` and `'End'`.
+2. **Next tick queue** executes, so `'process.nextTick'` is logged.
+3. **Microtask queue** executes, so `'Promise'` is logged.
+4. **Task queue** executes, so `'setTimeout'` is logged.
