@@ -17,3 +17,7 @@
     - After all synchronous code, next tick queue, and microtasks are complete, the event loop moves to the **task queue**, where it processes one macro task at a time.
     - Macro tasks include `setTimeout`, `setInterval`, `setImmediate` (in Node.js), and I/O callbacks (e.g., file or network operations).
     - Once the task queue processes one task, the event loop checks the next tick queue and the microtask queue again.
+5. **Re-check for Next Tick Queue and Microtasks**:
+    
+    - After each macro task completes, the event loop again checks for and executes any callbacks in the **next tick queue** and then the **microtask queue** before processing the next task from the task queue.
+    - This cycle continues until all tasks, next tick callbacks, and microtasks are exhausted.
