@@ -21,3 +21,6 @@
     
     - After each macro task completes, the event loop again checks for and executes any callbacks in the **next tick queue** and then the **microtask queue** before processing the next task from the task queue.
     - This cycle continues until all tasks, next tick callbacks, and microtasks are exhausted.
+6. **Iteration Continues**:
+    
+    - This process of checking the next tick queue, microtask queue, and task queue continues on each event loop tick, handling tasks as they appear and looping until the event loop has no more work to do.
