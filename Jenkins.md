@@ -31,3 +31,35 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
         4. Enter your **GitHub repository URL** (ensure this is the HTTPS URL, not the SSH URL).
 
 7. **Define a Jenkinsfile** in your code and push it to GitHub. This file will be automatically picked up by Jenkins when you manually trigger the pipeline.
+
+8. **Example Jenkins pipeline configuration**:
+    ```groovy
+    pipeline {
+        agent any
+
+        stages {
+            stage('Clone Repository') {
+                steps {
+                    git branch: 'main', url: 'https://github.com/<your-username>/<your-repo>.git'
+                }
+            }
+            stage('Build Docker Image') {
+                steps {
+                    script {
+                        // Build Docker image
+                        sh 'docker-compose up --build -d'
+                    }
+                }
+            }
+            stage('Deploy to Nginx on EC2') {
+                steps {
+                    script {
+                        // Run the container on EC2
+                        sh 'docker-compose down'
+                        sh 'docker-compose up -d'
+                    }
+                }
+            }
+        }
+    }
+    ```
