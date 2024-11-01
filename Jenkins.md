@@ -10,3 +10,12 @@
 3. **Install Docker and Jenkins**:
     - The exact steps to install Docker and Jenkins depend on the OS your EC2 instance is running.
     - After installing Jenkins, you will need to retrieve the initial admin password for Jenkins, which will be required when logging in for the first time. You can get this password by running the following command on your EC2 instance:
+
+```bash
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+
+- Once you log in, Jenkins will prompt you to set up a user account, which you will use for subsequent logins.
+
+4. **Dockerize your local `index.html` file** by defining a `Dockerfile` and a `docker-compose.yml` file:
+    - In your `docker-compose.yml`, use `nginx:alpine` as the base image, which includes an Nginx server that will serve the `index.html` file from `/usr/share/nginx/html/index.html` on port `80`.
