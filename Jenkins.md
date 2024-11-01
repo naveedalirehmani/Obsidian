@@ -63,3 +63,20 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
         }
     }
     ```
+
+9. Once everything is set up, go to the Jenkins dashboard and trigger the pipeline manually by clicking **"Build Now"** in the pipeline sidebar.
+
+### Troubleshooting:
+
+- When running the pipeline, you may encounter the following issue:
+    1. The Jenkinsfile steps will be executed on the EC2 instance by a user called `jenkins`, which is created by default during the Jenkins installation. This user might not have permission to run commands like `docker-compose up --build`. To resolve this, grant the necessary permissions by editing the sudoers file:
+
+```
+sudo visudo
+```
+    
+Add the following line at the bottom of the file:
+
+```
+jenkins ALL=(ALL) NOPASSWD: /usr/bin/docker, /usr/bin/docker-compose
+```
