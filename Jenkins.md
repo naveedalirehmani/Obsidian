@@ -19,3 +19,5 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 4. **Dockerize your local `index.html` file** by defining a `Dockerfile` and a `docker-compose.yml` file:
     - In your `docker-compose.yml`, use `nginx:alpine` as the base image, which includes an Nginx server that will serve the `index.html` file from `/usr/share/nginx/html/index.html` on port `80`.
+
+5. **Login to the Jenkins dashboard**, which will be accessible at `http://your-domain-publicip:8080`.
