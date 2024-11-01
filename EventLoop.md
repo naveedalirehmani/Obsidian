@@ -70,3 +70,7 @@ setTimeout
 2. **Next tick queue** executes, so `'process.nextTick'` is logged.
 3. **Microtask queue** executes, so `'Promise'` is logged.
 4. **Task queue** executes, so `'setTimeout'` is logged.
+
+### Final Note
+
+Each iteration of the event loop (or "tick") ensures that all synchronous code, next tick callbacks, and microtasks are processed before moving to tasks in the task queue. This approach ensures the correct priority order for asynchronous callbacks in Node.js.
