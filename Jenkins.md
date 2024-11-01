@@ -21,3 +21,11 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
     - In your `docker-compose.yml`, use `nginx:alpine` as the base image, which includes an Nginx server that will serve the `index.html` file from `/usr/share/nginx/html/index.html` on port `80`.
 
 5. **Login to the Jenkins dashboard**, which will be accessible at `http://your-domain-publicip:8080`.
+
+6. **Set up the Jenkins pipeline**:
+    1. Install the **GitHub Integration Plugin** to allow Jenkins to communicate with GitHub repositories.
+    2. Create a new pipeline in Jenkins:
+        1. In the **Pipeline** configuration, scroll down to the **Pipeline** section.
+        2. Select **Pipeline script from SCM**.
+        3. Choose **Git** as the SCM option.
+        4. Enter your **GitHub repository URL** (ensure this is the HTTPS URL, not the SSH URL).
