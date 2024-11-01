@@ -29,3 +29,5 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
         2. Select **Pipeline script from SCM**.
         3. Choose **Git** as the SCM option.
         4. Enter your **GitHub repository URL** (ensure this is the HTTPS URL, not the SSH URL).
+
+7. **Define a Jenkinsfile** in your code and push it to GitHub. This file will be automatically picked up by Jenkins when you manually trigger the pipeline.
