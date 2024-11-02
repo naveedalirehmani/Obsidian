@@ -1,4 +1,4 @@
-
+ 
 ## Getting started with docker.
 
 #### Introduction
@@ -82,7 +82,7 @@ there are the three channels that linux attaches to every process, stdin allows 
 -e VAR1=value1 \
 -e VAR2=value2 \
 --name container-name \
-image-name
+image-name==
 
 You can do `docker inspect bridge` to see all the containers connected to this network by default all containers are connected to bridge network on the host computer & that's how the talk to the internet.
 here you can also see the ip address each container in the network is assigned, or do hostname -i in the running process.
@@ -148,6 +148,3 @@ CMD ["npm","start"]
 ==docker-compose -f compose-file-name.yaml up== or ==docker-compose up -d==  : if you are already in the compose file folder.
 
 ==docker-compose down== : to bring down all the containers running through the compose
-
-
-https://chat.openai.com/share/e/558cfbe0-a690-4460-8160-020a4c70698b
