@@ -48,3 +48,15 @@ Here's a strategy that can be used to handle authentication effectively in a mic
    - When a user is banned, we emit a **"banned session" event** with a 15-minute expiration period.
    - If the banned user’s token expires within that time, they’ll have to request a new one, but the request will be blocked. since `jwt` also has 15min expiry
    - If the user tries to access other services before the token expires, those services will receive the "banned session" event and block access as well.
+
+
+### Testing with Micro-services
+
+ 
+ 
+
+
+### Diagrams.
+
+**Ticketing.dev**
+![[Pasted image 20240930164423.png]]
