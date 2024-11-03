@@ -39,3 +39,12 @@ Here's a strategy that can be used to handle authentication effectively in a mic
    We’ll create a **shared library** for validating JWTs. Each microservice will use this library to validate tokens, avoiding the need to forward requests to the **auth** service each time. This has two benefits:
    - No need for inter-service dependencies where every service has to ask the auth service to validate tokens.
    - Each service will be able to handle token validation on its own, without duplicating code in each service.
+
+3. **How do we handle banned users?**
+   Imagine a scenario where a user logs in, gets a JWT token, and later gets banned by an admin. How do we block that user across services?
+   
+   In a monolithic app, this is simple: we can manage sessions and use refresh tokens. But in microservices, it’s a bit more complex. To handle this, we’ll use refresh tokens and session management via **events**. Here’s how it works:
+   
+   - When a user is banned, we emit a **"banned session" event** with a 15-minute expiration period.
+   - If the banned user’s token expires within that time, they’ll have to request a new one, but the request will be blocked. since `jwt` also has 15min expiry
+   - If the user tries to access other services before the token expires, those services will receive the "banned session" event and block access as well.
