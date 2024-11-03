@@ -29,3 +29,8 @@ One thing we can do is introduce a different database for the services that need
 Authentication can be complicated on its own, but when you bring microservices into the picture, it becomes even more challenging. There’s no single "right" way to handle authentication in microservices—it depends on the app’s architecture. Factors like whether you’re using client-side or server-side rendering, and whether you store data in cookies or local storage, all come into play.
 
 Here's a strategy that can be used to handle authentication effectively in a microservices setup.
+
+### Three main issues we need to address:
+
+1. **Preferred authentication strategy**
+   The recommended approach is using **http-only cookies** for managing client sessions, paired with **JWT (JSON Web Tokens)** for authentication. 
