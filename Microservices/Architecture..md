@@ -34,3 +34,8 @@ Here's a strategy that can be used to handle authentication effectively in a mic
 
 1. **Preferred authentication strategy**
    The recommended approach is using **http-only cookies** for managing client sessions, paired with **JWT (JSON Web Tokens)** for authentication. 
+
+2. **Who validates the token?**
+   We’ll create a **shared library** for validating JWTs. Each microservice will use this library to validate tokens, avoiding the need to forward requests to the **auth** service each time. This has two benefits:
+   - No need for inter-service dependencies where every service has to ask the auth service to validate tokens.
+   - Each service will be able to handle token validation on its own, without duplicating code in each service.
