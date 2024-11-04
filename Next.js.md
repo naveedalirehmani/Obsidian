@@ -346,6 +346,13 @@ export const metadata: Metadata = {
 }
 ```
 
+---
+### THEORY - ==Important==
+
+React renders all components on the client side, which means that when a page is requested, the server sends a partially rendered boilerplate template with placeholder titles and descriptions. It also includes a link to a JavaScript file that must be loaded to make the component interactive. This is bad for SEO.
+
+To fix this, **SSG (Static Site Generation)** or **SSR (Server-Side Rendering)** was introduced. In SSR, the server renders the HTML on the server side and sends back a fully rendered HTML file to the client. This allows indexing crawlers used by search engines to properly index the page. However, this page is not interactive, so the browser has to request a JavaScript file that hydrates the interactivity. By hydration, I mean that the React library on the client side looks at the initial HTML page sent from the server and carefully picks the elements that are dynamic, adding interactivity.
+
 
 ---
 ### Next.js Api
