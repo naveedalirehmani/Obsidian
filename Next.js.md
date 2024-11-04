@@ -353,6 +353,15 @@ React renders all components on the client side, which means that when a page is
 
 To fix this, **SSG (Static Site Generation)** or **SSR (Server-Side Rendering)** was introduced. In SSR, the server renders the HTML on the server side and sends back a fully rendered HTML file to the client. This allows indexing crawlers used by search engines to properly index the page. However, this page is not interactive, so the browser has to request a JavaScript file that hydrates the interactivity. By hydration, I mean that the React library on the client side looks at the initial HTML page sent from the server and carefully picks the elements that are dynamic, adding interactivity.
 
+##### **Downsides of Hydration:**
+1. You have to fetch everything before anything is rendered to the user.
+2. You have to fetch all JavaScript before hydration can take place.
+3. You cannot hydrate elements one by one; it all has to happen together.
+
+##### **These drawbacks of SSR were addressed in React 18 with the introduction of React `Suspense`:**
+1. **HTML Streaming on the Server**
+2. **Selective Hydration on the Client**
+
 
 ---
 ### Next.js Api
