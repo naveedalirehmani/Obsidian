@@ -315,6 +315,22 @@ Both layout.tsx and page.tsx files can export metadata. If defined in a layout, 
 
 When there's metadata in multiple places for the same route, they get combined, but page metadata will replace layout metadata if they have the same properties
 
+```tsx
+import type { Metadata } from 'next'
+ 
+// either Static metadata
+export const metadata: Metadata = {
+  title: '...',
+}
+ 
+// or Dynamic metadata
+export async function generateMetadata({ params }) {
+  return {
+    title: '...',
+  }
+}
+```
+
 
 ---
 ### Next.js Api
