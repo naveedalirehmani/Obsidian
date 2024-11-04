@@ -370,6 +370,11 @@ Now, we can also implement selective hydration using code-splitting techniques. 
 
 If multiple components are in the selective hydration phase, React prioritizes the hydration based on user interaction. For example, clicking the HTML of a hydrating component will prioritize its hydration.
 
+##### **In summary, each of these concepts solves a problem in the previous technique:**
+- Traditional client-side rendering → server-side rendering → Suspense and lazy loading → React server components
+
+React server components will be explained in the upcoming sections.
+
 
 ---
 ### Next.js Api
