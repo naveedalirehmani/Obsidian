@@ -263,7 +263,7 @@ but if you have a route segment configurations ( explained below ) this behaviou
 
 1. For individual data fetches, you can opt out of caching by setting the cache option to no-store
 2. Once you specify the no-store option for a fetch request, subsequent fetch requests will also not be cached
-3. By default, Next.js will cache fetch requests that occur before any dynamic functions (cookies), headers), searchParams) are used and will not cache requests found after dynamic functions
+3. By default, Next.js will cache fetch requests that occur before any dynamic functions cookies, headers, searchParams are used and will not cache requests found after dynamic functions
 
 you can also do 
 ```tsx
@@ -297,6 +297,15 @@ You can also set a expiry on the cache data. pass below option to fetch request.
 ### Client component caching ( app router )
 
 If you want the caching behaviour explained above for the server components in the client components, you can use a library like a tanstack query for this.
+
+
+---
+
+### Configuring Metadata
+
+You have 2 options for defining meta for pages.
+1. Export a static metadata object
+2. Export a dynamic generateMetadata function.
 
 
 ---
