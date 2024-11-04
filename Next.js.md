@@ -362,6 +362,14 @@ To fix this, **SSG (Static Site Generation)** or **SSR (Server-Side Rendering)**
 1. **HTML Streaming on the Server**
 2. **Selective Hydration on the Client**
 
+With Suspense, we can stream HTML in chunks by sections. So, if you have 3 components on the page — header, footer, and main — and the main component is fairly large, wrapping the main component in Suspense means that the HTML for the main component will be loaded in chunks. 
+
+This solves the issue of needing the full HTML for a page to be fetched before it can render.
+
+Now, we can also implement selective hydration using code-splitting techniques. This is achieved by lazy-loading the `main` component.
+
+If multiple components are in the selective hydration phase, React prioritizes the hydration based on user interaction. For example, clicking the HTML of a hydrating component will prioritize its hydration.
+
 
 ---
 ### Next.js Api
