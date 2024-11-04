@@ -331,6 +331,21 @@ export async function generateMetadata({ params }) {
 }
 ```
 
+We can also have dynamic titles where default is default and will be replaced by page.tsx if title exists in page.tsx
+absolute will force render this title, we don't need this in layout but in page.tsx.
+template is for dynamic titles where value of template can be "%5 documents" here if you define a title in the page.tsx file as well it will only replace %5 only.
+```tsx
+import type { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+  title: {
+    template: '...',
+    default: '...',
+    absolute: '...',
+  },
+}
+```
+
 
 ---
 ### Next.js Api
