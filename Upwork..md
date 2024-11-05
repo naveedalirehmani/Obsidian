@@ -121,7 +121,7 @@ Yes
 
 
 ```
-Hello Oren, I hope you are doing well & best of luck with your Health insurance website.
+Hello Bob, I hope you are doing well & best of luck with your Health insurance website.
 
 I'm Naveed Ali, a full-stack developer and software engineer. 
 
@@ -192,3 +192,17 @@ I'm also looking for an internship and was wondering if I could forward you my r
 Understand → Observe → Define → Ideate → Prototype → Test = 💎 Double Diamond Design Model
 
 With proven experience in the field, I am confident that if selected, I can bring my skills to the new position and contribute significantly to the success of the project.
+
+
+
+```
+I've built web and mobile applications serving Millions of users in real-time.
+
+As the only Engineer on the job, I can handle everything, capable of taking your project from Concept to Full-stack development, all the way to managing cloud engineering & DevOps.
+
+I've 5+ years of experience in Software Engineering, Full-Stack development, Cloud & DevOps.
+ 
+Beyond my freelance work, I contribute to the tech community on platforms like Reddit & Medium, where I write articles about full-stack development and cloud engineering. Engaging with all kinds of tech enthusiasts, I'm passionate about sharing knowledge and helping others in the tech space.  
+
+I'd love to hear about your project and, most importantly, how I can help you. Contact me today to schedule a quick introduction call, ensuring I'm the perfect fit for you.  
+```
