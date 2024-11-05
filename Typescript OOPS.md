@@ -126,3 +126,7 @@ myDog.makeSound();  // Output: Rex barks
 myDog.move();       // Output: Rex is moving
 
 ```
+
+### 6. Static
+
+the `static` keyword is used to define class-level members, which are properties and methods that belong to the class itself rather than to instances of the class. This means you can access these members without creating an instance of the class.
