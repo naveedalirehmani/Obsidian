@@ -17,18 +17,18 @@ Microservices offer many benefits, such as the ability to scale parts of the sys
 
 
 ```
-Hi Tayyaba,  
+Hi Leen,  
   
-I'm Naveed Ali - I wanted to connect because I'm very interested in pursuing a career at Abendsoft, especially related to web development. 
+I'm Naveed Ali - I wanted to connect because I'm very interested in pursuing a career at JWM, especially related to web Developer. 
 
 I'm also looking for an internship and was wondering if I could forward you my resume?  
 ```
 
 
 ```
-Hi Adam,  
+Hi Anastasiya,  
   
-I wanted to connect because I'm very interested in pursuing a career at Adecco.
+I'm a full stack developer & I'm very interested in pursuing a career at Pargo.
 
 I'm also looking for an internship and was wondering if I could forward you my resume? 
 ```
@@ -68,4 +68,7 @@ https://www.linkedin.com/in/naveedalirehmani/
 2. there is a option in the about section for each company page, where you can select I'm interest to work here. this notifies the recruiters of the company about your interest in working there.
 3. Apply for skill assessment on your endorsement to rank higher in that domain.
 4. add your resume in the features tabs.
+
+
+
 
