@@ -263,7 +263,7 @@ but if you have a route segment configurations ( explained below ) this behaviou
 
 1. For individual data fetches, you can opt out of caching by setting the cache option to no-store
 2. Once you specify the no-store option for a fetch request, subsequent fetch requests will also not be cached
-3. By default, Next.js will cache fetch requests that occur before any dynamic functions (cookies), headers), searchParams) are used and will not cache requests found after dynamic functions
+3. By default, Next.js will cache fetch requests that occur before any dynamic functions cookies, headers, searchParams are used and will not cache requests found after dynamic functions
 
 you can also do 
 ```tsx
@@ -297,6 +297,83 @@ You can also set a expiry on the cache data. pass below option to fetch request.
 ### Client component caching ( app router )
 
 If you want the caching behaviour explained above for the server components in the client components, you can use a library like a tanstack query for this.
+
+
+---
+
+### Configuring Metadata
+
+You have 2 options for defining meta for pages.
+1. Export a static metadata object
+2. Export a dynamic generateMetadata function.
+
+**Metadata rules**
+
+Both layout.tsx and page.tsx files can export metadata. If defined in a layout, it applies to all pages in that layout, but if defined in a page, it applies only to that page
+
+==Metadata is read in order, from the root level down to the final page level ==
+
+When there's metadata in multiple places for the same route, they get combined, but page metadata will replace layout metadata if they have the same properties
+
+```tsx
+import type { Metadata } from 'next'
+ 
+// either Static metadata
+export const metadata: Metadata = {
+  title: '...',
+}
+ 
+// or Dynamic metadata
+export async function generateMetadata({ params }) {
+  return {
+    title: '...',
+  }
+}
+```
+
+We can also have dynamic titles where default is default and will be replaced by page.tsx if title exists in page.tsx
+absolute will force render this title, we don't need this in layout but in page.tsx.
+template is for dynamic titles where value of template can be "%5 documents" here if you define a title in the page.tsx file as well it will only replace %5 only.
+```tsx
+import type { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+  title: {
+    template: '...',
+    default: '...',
+    absolute: '...',
+  },
+}
+```
+
+---
+### THEORY - ==Important==
+
+React renders all components on the client side, which means that when a page is requested, the server sends a partially rendered boilerplate template with placeholder titles and descriptions. It also includes a link to a JavaScript file that must be loaded to make the component interactive. This is bad for SEO.
+
+To fix this, **SSG (Static Site Generation)** or **SSR (Server-Side Rendering)** was introduced. In SSR, the server renders the HTML on the server side and sends back a fully rendered HTML file to the client. This allows indexing crawlers used by search engines to properly index the page. However, this page is not interactive, so the browser has to request a JavaScript file that hydrates the interactivity. By hydration, I mean that the React library on the client side looks at the initial HTML page sent from the server and carefully picks the elements that are dynamic, adding interactivity.
+
+##### **Downsides of Hydration:**
+1. You have to fetch everything before anything is rendered to the user.
+2. You have to fetch all JavaScript before hydration can take place.
+3. You cannot hydrate elements one by one; it all has to happen together.
+
+##### **These drawbacks of SSR were addressed in React 18 with the introduction of React `Suspense`:**
+1. **HTML Streaming on the Server**
+2. **Selective Hydration on the Client**
+
+With Suspense, we can stream HTML in chunks by sections. So, if you have 3 components on the page — header, footer, and main — and the main component is fairly large, wrapping the main component in Suspense means that the HTML for the main component will be loaded in chunks. 
+
+This solves the issue of needing the full HTML for a page to be fetched before it can render.
+
+Now, we can also implement selective hydration using code-splitting techniques. This is achieved by lazy-loading the `main` component.
+
+If multiple components are in the selective hydration phase, React prioritizes the hydration based on user interaction. For example, clicking the HTML of a hydrating component will prioritize its hydration.
+
+##### **In summary, each of these concepts solves a problem in the previous technique:**
+- Traditional client-side rendering → server-side rendering → Suspense and lazy loading → React server components
+
+React server components will be explained in the upcoming sections.
 
 
 ---

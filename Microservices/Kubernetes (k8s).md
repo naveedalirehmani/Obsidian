@@ -67,6 +67,21 @@ The Ingress controller can distribute incoming traffic across multiple instances
 **Advanced Routing**:
 `ingress-nginx` supports advanced routing features like URL rewrites, redirects, and traffic splitting, giving you fine-grained control over how traffic is handled.
 
+
+---
+
+### Request flow for kubernetes
+
+- A user or CI/CD pipeline makes a request using **kubectl** to deploy an application.
+- The **API Server** processes this request and stores relevant details in **etcd**.
+- The **Scheduler** decides on which **Worker Node** the new pod should run.
+- The **Controller Manager** creates a deployment, ensuring the desired number of replicas are up.
+- The **kubelet** on the chosen worker node is instructed to start the container through the **Container Runtime**.
+- The **kube-proxy** on each node ensures networking is set up so that the pod can communicate with other services or with external requests.
+
+---
+
+
 ### installation 
 
 **install glasskube.**
@@ -81,5 +96,11 @@ glasskube install ingress-nginx
 ```
 
 
+### Adding secrects
+
+```
+kubectl create secret generic jwt-secret --from-literal=jwt=asdf
+```
 
 # ekctl 
+
