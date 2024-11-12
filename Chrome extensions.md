@@ -59,3 +59,19 @@ chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
 });
 
 ```
+
+#### **c. `chrome.storage`**
+
+Chrome storage is used to store data persistently, such as user preferences or extension settings.
+
+Example:
+```ts
+// Store data in Chrome's local storage
+chrome.storage.local.set({ theme: 'dark' });
+
+// Retrieve data from Chrome's local storage
+chrome.storage.local.get(['theme'], (result) => {
+  console.log('Theme:', result.theme);
+});
+
+```
