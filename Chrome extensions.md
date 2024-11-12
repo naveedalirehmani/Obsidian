@@ -44,3 +44,18 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 });
 
 ```
+#### **b. `chrome.tabs`**
+
+This API allows you to manipulate browser tabs, such as opening new tabs or getting information about the current tab.
+
+Example:
+```tsx
+// Open a new tab with a specific URL
+chrome.tabs.create({ url: 'https://www.google.com' });
+
+// Get the active tab's information
+chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+  console.log('Current tab:', tabs[0]);
+});
+
+```
