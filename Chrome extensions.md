@@ -75,3 +75,20 @@ chrome.storage.local.get(['theme'], (result) => {
 });
 
 ```
+
+#### **d. `chrome.webRequest`**
+
+This API is used to intercept and modify network requests. You can use it to block requests, redirect them, or inspect them for security purposes.
+
+Example:
+```ts
+// Block requests to a specific domain
+chrome.webRequest.onBeforeRequest.addListener(
+  (details) => {
+    return { cancel: true }; // Cancel the request
+  },
+  { urls: ['*://*.badwebsite.com/*'] },
+  ['blocking']
+);
+
+```
