@@ -92,3 +92,22 @@ chrome.webRequest.onBeforeRequest.addListener(
 );
 
 ```
+#### **e. `chrome.alarms`**
+
+Allows you to schedule tasks or alarms to trigger events at specific intervals.
+
+Example:
+```ts
+// Set an alarm to go off in 1 minute
+chrome.alarms.create('myAlarm', { delayInMinutes: 1 });
+
+// Listen for when the alarm goes off
+chrome.alarms.onAlarm.addListener((alarm) => {
+  if (alarm.name === 'myAlarm') {
+    console.log('Alarm triggered!');
+  }
+});
+
+```
+
+
