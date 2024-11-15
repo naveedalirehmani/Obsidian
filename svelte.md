@@ -240,3 +240,30 @@ If a `+layout.js` exports [page options](https://kit.svelte.dev/docs/page-opt
 </script>
 ```
 
+
+### creating a store.
+
+**lib/counter.ts**
+```ts
+import { writable } from 'svelte/store'
+
+function createCounter(count: number) {
+	const { subscribe, set, update } = writable(count)
+
+	function increment() {
+		update(count => count + 1)
+	}
+
+	function decrement() {
+		update(count => count - 1)
+	}
+
+	function reset() {
+		set(0)
+	}
+
+	return { subscribe, increment, decrement, reset }
+}
+
+export const counter = createCounter(0)
+```
