@@ -211,3 +211,32 @@ If the error occurs inside a `load` function in `+layout(.server).js`, the cl
 
 <h1>{$page.status}: {$page.error.message}</h1>
 ```
+
+#### +layout.svelte
+Just like `+page.svelte` loading data from `+page.js`, your `+layout.svelte` component can get data from a [`load`](https://kit.svelte.dev/docs/load) function in `+layout.js`.
+
+src/routes/settings/+layout.js
+```ts
+/** @type {import('./$types').LayoutLoad} */
+export function load() {	
+	return {		
+		sections: [			
+				{ slug: 'profile', title: 'Profile' },			
+				{ slug: 'notifications', title: 'Notifications' }		
+			]	
+		};
+}
+```
+
+If a `+layout.js` exports [page options](https://kit.svelte.dev/docs/page-options) — `prerender`, `ssr` and `csr` — they will be used as defaults for child pages.
+
+**src/routes/settings/profile/+page.svelte**
+```ts
+<script>
+	/** @type {import('./$types').PageData} */
+	export let data;
+
+	console.log(data.sections); // [{ slug: 'profile', title: 'Profile' }, ...]
+</script>
+```
+
