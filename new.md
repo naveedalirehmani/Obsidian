@@ -81,3 +81,24 @@ REACT_APP_NY_TIMES: "your_nytimes_api_key"
 ```
 
   
+
+## Building and Running the Application
+
+Build the Docker Image: Run the following command to build the Docker image:
+
+  
+
+```
+
+docker-compose build
+
+```
+
+  
+
+```
+
+docker-compose up
+
+```
+
