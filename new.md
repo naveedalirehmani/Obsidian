@@ -21,3 +21,19 @@ The News Aggregator App allows users to:
 3. **Mobile-Responsive Design**: The application is optimized for viewing on mobile devices.
 
   
+
+### Data Sources
+
+  
+
+This app uses the following data sources to fetch articles:
+
+  
+
+- **NewsAPI**: Provides access to articles from various news sources including major newspapers, magazines, and blogs.
+
+- **The Guardian**: Accesses articles from The Guardian newspaper.
+
+- **New York Times**: Fetches articles from The New York Times.
+
+  
