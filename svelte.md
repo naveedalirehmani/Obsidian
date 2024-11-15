@@ -35,3 +35,19 @@
 <button on:click={increment}>Increment</button>
 
 ```
+
+---
+### slots
+
+**ChildComponent.svelte**
+```ts
+
+<div>
+  <h2>Child Component</h2>
+  <slot name="header"></slot>
+  <div class="content">
+    <slot></slot>
+  </div>
+  <slot name="footer"></slot>
+</div>
+```
