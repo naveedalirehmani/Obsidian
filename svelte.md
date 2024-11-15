@@ -174,3 +174,26 @@ in svelte $: is equivalent to useEffect and useMemo is it's called when a state 
 
 ```
 
+
+
+### svelte.kit
+
+you can create pages like this. 
+- `src/routes` is the root route
+- `src/routes/about` creates an `/about` route
+- `src/routes/blog/[slug]` creates a route with a _parameter_, `slug`, that can be used to load data dynamically when a user requests a page like `/blog/hello-world`
+
+**src/routes/blog/[slug]/+page.svelte**
+```ts
+<script>
+	/** @type {import('./$types').PageData} */
+	export let data;
+</script>
+
+<h1>{data.title}</h1>
+<div>{@html data.content}</div>
+```
+in the above example data is return from the `+page.ts` or from `+page.server.ts` if it's fetching and returning from an api
+
+**why `+page.server.ts`**
+If your `load` function can only run on the server — for example, if it needs to fetch data from a database or you need to access private [environment variables](https://kit.svelte.dev/docs/modules#$env-static-private) like API keys
