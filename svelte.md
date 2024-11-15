@@ -89,3 +89,34 @@ in svelte $: is equivalent to useEffect and useMemo is it's called when a state 
 <button on:click={increment}>Increment</button>
 
 ```
+
+---
+### global state with writables
+
+```ts
+<script>
+  import { writable } from 'svelte/store';
+
+  // Create a writable store with an initial value
+  const count = writable(0);
+
+  // Function to increment the count
+  function increment() {
+    count.update(n => n + 1);
+  }
+</script>
+
+<main>
+  <h1>Writable Store Example</h1>
+  <p>Count: {$count}</p>
+  <button on:click={increment}>Increment</button>
+</main>
+
+<style>
+  main {
+    text-align: center;
+    margin-top: 50px;
+  }
+</style>
+
+```
