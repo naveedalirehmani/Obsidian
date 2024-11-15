@@ -51,3 +51,19 @@
   <slot name="footer"></slot>
 </div>
 ```
+
+**ParentComponent**
+```ts
+<script>
+  import ChildComponent from './ChildComponent.svelte';
+</script>
+
+<main>
+  <h1>Parent Component</h1>
+  <ChildComponent>
+    <h3 slot="header">Header Content</h3>
+    <p>Main Content</p>
+    <button slot="footer">Footer Button</button>
+  </ChildComponent>
+</main>
+```
