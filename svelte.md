@@ -67,3 +67,25 @@
   </ChildComponent>
 </main>
 ```
+
+---
+### side effects and computed values.
+
+in svelte $: is equivalent to useEffect and useMemo is it's called when a state changes. can be used to called side effect or for component values.
+```ts
+<script>
+  let count = 0;
+
+  // Reactive declaration for computed value
+  $: doubled = count * 2;
+
+  function increment() {
+    count += 1;
+  }
+</script>
+
+<p>Count: {count}</p>
+<p>Doubled: {doubled}</p>
+<button on:click={increment}>Increment</button>
+
+```
