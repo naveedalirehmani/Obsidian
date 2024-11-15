@@ -37,3 +37,47 @@ This app uses the following data sources to fetch articles:
 - **New York Times**: Fetches articles from The New York Times.
 
   
+
+## Technologies Used
+
+  
+
+- **Frontend**: React.js
+
+- **Containerization**: Docker
+
+- **APIs**: NewsAPI, The Guardian API, New York Times API
+
+  
+
+## Getting Started
+
+  
+
+### Prerequisites
+
+  
+
+- Docker: Ensure you have Docker installed on your machine. You can download it from [Docker's official website](https://www.docker.com/get-started).
+
+  
+
+### Setting Up Environment Variables
+
+  
+
+Update your `docker-compose.yml` file with the following environment variables:
+
+  
+
+```yaml
+
+REACT_APP_NEWS_API: "your_newsapi_key"
+
+REACT_APP_THE_GUARDIAN: "your_guardian_api_key"
+
+REACT_APP_NY_TIMES: "your_nytimes_api_key"
+
+```
+
+  
