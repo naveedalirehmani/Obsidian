@@ -197,3 +197,17 @@ in the above example data is return from the `+page.ts` or from `+page.server.ts
 
 **why `+page.server.ts`**
 If your `load` function can only run on the server — for example, if it needs to fetch data from a database or you need to access private [environment variables](https://kit.svelte.dev/docs/modules#$env-static-private) like API keys
+
+
+#### +error
+SvelteKit will 'walk up the tree' looking for the closest error boundary — if the file above didn't exist it would try `src/routes/blog/+error.svelte` and then `src/routes/+error.svelte` before rendering the default error page. If _that_ fails (or if the error was thrown from the `load` function of the root `+layout`, which sits 'above' the root `+error`), SvelteKit will bail out and render a static fallback error page, which you can customise by creating a `src/error.html` file.
+
+If the error occurs inside a `load` function in `+layout(.server).js`, the closest error boundary in the tree is an `+error.svelte` file _above_ that layout (not next to it).
+
+```ts
+<script>
+	import { page } from '$app/stores';
+</script>
+
+<h1>{$page.status}: {$page.error.message}</h1>
+```
