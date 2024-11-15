@@ -120,3 +120,57 @@ in svelte $: is equivalent to useEffect and useMemo is it's called when a state 
 </style>
 
 ```
+
+### todo list
+
+
+```ts
+<script>
+  import { writable } from 'svelte/store';
+
+  let newTodo = '';
+  let todos = writable([]);
+
+  function addTodo() {
+    if (newTodo.trim() !== '') {
+      todos.update(t => [...t, { text: newTodo, completed: false }]);
+      newTodo = '';
+    }
+  }
+
+  function toggleTodo(index) {
+    todos.update(t => {
+      t[index].completed = !t[index].completed;
+      return t;
+    });
+  }
+
+  function deleteTodo(index) {
+    todos.update(t => t.filter((_, i) => i !== index));
+  }
+</script>
+
+<style>
+  .completed {
+    text-decoration: line-through;
+  }
+</style>
+
+<div>
+  <h1>To-Do List</h1>
+  <input type="text" bind:value={newTodo} placeholder="Enter a new to-do" />
+  <button on:click={addTodo}>Add To-Do</button>
+
+  <ul>
+    {#each $todos as todo, index}
+      <li class:completed={todo.completed}>
+        <input type="checkbox" checked={todo.completed} on:change={() => toggleTodo(index)} />
+        {todo.text}
+        <button on:click={() => deleteTodo(index)}>Delete</button>
+      </li>
+    {/each}
+  </ul>
+</div>
+
+```
+
