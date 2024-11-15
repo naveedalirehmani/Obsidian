@@ -267,3 +267,37 @@ function createCounter(count: number) {
 
 export const counter = createCounter(0)
 ```
+
+#### updating the store value.
+
+increment.svelte
+```html
+<script lang="ts">
+	import { counter } from '$lib/counter'
+</script>
+
+<button on:click={counter.increment}>+</button>
+```
+
+decrement.svelte
+```html
+<script lang="ts">
+	import { counter } from '$lib/counter'
+</script>
+
+<button on:click={counter.decrement}>-</button>
+```
+
+reset.svelte
+```html
+<script lang="ts">
+	import { counter } from '$lib/counter'
+</script>
+
+<button on:click={counter.reset}>
+	Reset
+</button>
+```
+
+The above example is used to showcase how we can abstract the logic into a store. but you can also mutate the store state directly in a component by using `$counter` this syntax, by using this svelte will auto subscribe and unsubscribe for you.
+but you can use this only inside a `.svelte`  file because this syntactical sugar added on by svelte compiler.
